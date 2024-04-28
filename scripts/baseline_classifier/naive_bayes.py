@@ -17,27 +17,25 @@ class NaiveBayes:
         # get the list of English stop words
         stop_words = set(stopwords.words('english'))
         
-        for row in df_train.iterrows():
+        for index, row in df_train.iterrows():
 
             # unpacking the row fields.
             emotion_class, text = row
 
-            print(text)
+            # tokenize the text.
+            tokens = word_tokenize(text)
 
-            # # tokenize the text.
-            # tokens = word_tokenize(text)
-
-            # # cleanse the tokens
-            # filtered_tokens = self.preprocess_tokens(tokens, stop_words)
+            # cleanse the tokens
+            filtered_tokens = self.preprocess_tokens(tokens, stop_words)
                         
-            # self.class_counts[emotion_class] += 1
+            self.class_counts[emotion_class] += 1
 
-            # for token in filtered_tokens:
-            #     term = self.normalizeTerm(token)
-            #     #construct the vocabulary of unique terms
-            #     self.vocab.add(term)
-            #     # update the term count for the given class
-            #     self.term_counts[emotion_class][term] += 1
+            for token in filtered_tokens:
+                term = self.normalizeTerm(token)
+                #construct the vocabulary of unique terms
+                self.vocab.add(term)
+                # update the term count for the given class
+                self.term_counts_dictionary[emotion_class][term] += 1
 
         # we sum up all the review classes seen in the records to arrive at N. 
         self.N = sum(self.class_counts.values())
@@ -85,7 +83,7 @@ class NaiveBayes:
             for term in terms:
                 if term not in likelihood_probs[cls]:
                     term = 'default'
-                class_scores[cls] += log(likelihood_probs[cls][term])
+                class_scores[cls] += math.log(likelihood_probs[cls][term])
 
         # use maximum a posteriori to get the best class.
         return max(class_scores, key=class_scores.get)
