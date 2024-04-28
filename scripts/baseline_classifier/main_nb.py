@@ -3,7 +3,6 @@ from baseline_classifier.naive_bayes import NaiveBayes
 
 def run_naive_bayes(df_train, df_test):
     print("Running Naive Bayes algorithm")
-    print(len(df_train), len(df_test))
 
     object = NaiveBayes()
 
@@ -16,7 +15,7 @@ def run_naive_bayes(df_train, df_test):
     correct_predictions = 0
     total_samples = 0  # To count the total number of samples
 
-    for row in df_test.iterrows():
+    for _, row in df_test.iterrows():
         # unpacking the row fields.
         emotion_class, text = row
                     
@@ -35,7 +34,7 @@ def run_naive_bayes(df_train, df_test):
     accuracy = correct_predictions / total_samples
     print("\nEvaluation Report :::")
     print("Accuracy is ",accuracy)
-    print(f"f-score = {f_score}\nprecision = {precision}\nrecall = {recall}\nmacro-f = {macro}\nmicro-f = {micro}")
+    #print(f"f-score = {f_score}\nprecision = {precision}\nrecall = {recall}\nmacro-f = {macro}\nmicro-f = {micro}")
 
 if __name__ == "__main__":
     run_naive_bayes()

@@ -11,10 +11,10 @@ if __name__ == "__main__":
     data_loader = dp.DataLoader(path_to_train, path_to_test, path_to_gold, path_to_pred)
 
     # data for training
-    df_train = data_loader.train_data
+    df_train = data_loader.df_train
 
     # data for testing
-    df_test = data_loader.test_data
+    df_test = data_loader.df_test
 
     # classifier
     classifier = nb.run_naive_bayes(df_train, df_test)    
