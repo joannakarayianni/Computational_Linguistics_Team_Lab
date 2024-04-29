@@ -79,7 +79,7 @@ def load_data_from_csv(file_path):
     return samples 
 
 # Load data from CSV
-data = load_data_from_csv('/Users/ioannakaragianni/Desktop/shit/isear-train.csv')
+data = load_data_from_csv('/Users/ioannakaragianni/Desktop/Lab/isear-train.csv')
 
 # Define the label
 label = EmotionSample('joy','When I understood that I was admitted to the University')
