@@ -45,3 +45,4 @@ Werkzeug
 wrapt
 zipp
 nltk
+gensim
