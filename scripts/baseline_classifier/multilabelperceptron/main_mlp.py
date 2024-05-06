@@ -1,6 +1,6 @@
 import csv
-from baseline_classifier.emotion import EmotionSample
-from baseline_classifier.multilabelperceptron import MultiLabelPerceptron
+from baseline_classifier.multilabelperceptron.emotion import EmotionSample
+from baseline_classifier.multilabelperceptron.multilabelperceptron import MultiLabelPerceptron
 import evaluation.evaluation_metrics as eval
 
 def run_perceptron(df_train, df_test):
@@ -60,9 +60,6 @@ def run_perceptron(df_train, df_test):
         eval.test_evaluation(true_labels, predicted_labels, labels)
 
     evaluate_mlp()
-
-            
-
 
 if __name__ == "__main__":
     run_perceptron()
