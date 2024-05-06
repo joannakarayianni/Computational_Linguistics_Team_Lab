@@ -1,6 +1,6 @@
 import dataprocessor.dataloader as dp
 import baseline_classifier.main_nb as nb
-import baseline_classifier.multilabelperceptron as mlp
+import baseline_classifier.main_mlp as mlp
 
 if __name__ == "__main__":
     path_to_gold = 'datasets/isear-val.csv'
@@ -21,7 +21,6 @@ if __name__ == "__main__":
     classifier = nb.run_naive_bayes(df_train, df_test)   
 
     # run perceptron classifier 
-    mlp.run_perceptron()
-
+    mlp.run_perceptron(df_train, df_test)
 
     
