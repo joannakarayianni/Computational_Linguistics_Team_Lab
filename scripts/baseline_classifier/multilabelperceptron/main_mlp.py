@@ -20,7 +20,7 @@ def run_perceptron(df_train, df_test):
                         text = row[1]     # Text is in the second column
                         samples.append(EmotionSample(emotions, text))
         return samples 
-    data = load_data_from_csv('/Users/tonmoyrakshit/Documents/NV_University_of_Stuttgart/2nd semester/Methods Team labs/datasets/isear-train.csv')
+    data = load_data_from_csv('datasets/isear-train.csv')
 
     # Labels
     labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
