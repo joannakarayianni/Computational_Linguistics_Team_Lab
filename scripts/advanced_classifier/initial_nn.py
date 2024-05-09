@@ -4,24 +4,40 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-import advanced_classifier.word_embeddings.retrain_word2vec as CustomisedEmbeddings 
+import advanced_classifier.word_embeddings.retrain_word2vec as customEmbeddings 
+from collections import Counter
 
 class SequentialNN:
 
-    def __init__(self, df_train):
+    def __init__(self, df_train, df_val, df_test):
         self.df_train = df_train
+        self.df_val = df_val
+        self.df_test = df_test
 
     def train(self):
         # Generate word embeddings
-        embedding_model = CustomisedEmbeddings(self.df_train)
-        word2vec_model = embedding_model.generate_embeddings()
+
+        # For training dataset
+        embedding_model = customEmbeddings.WordEmbeddingTrainer(self.df_train)
+        X_train_embeddings, y_train_labels = embedding_model.get_embeddings_matrix()
+        
+        # For validation dataset
+        embedding_model_val = customEmbeddings.WordEmbeddingTrainer(self.df_val)
+        X_val_embeddings, y_val_labels = embedding_model_val.get_embeddings_matrix()
+
         # Define and compile neural network model
-        model = Sequential([
-            Dense(64, activation='relu', input_shape=(X_train_embeddings.shape[1],)),
-            Dense(32, activation='relu'),
-            Dense(1, activation='sigmoid')
-        ])
-        model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+        # Define the Sequential model
+        model = Sequential()
+        # Define labels (emotions)
+        y_train_labels_binary = pd.get_dummies(y_train_labels).values
+        y_val_labels_binary = pd.get_dummies(y_val_labels).values
+
+        # Add layers to the model one by one
+        model.add(Dense(64, activation='relu', input_shape=(X_train_embeddings.shape[1],)))
+        model.add(Dense(32, activation='relu'))
+        model.add(Dense(7, activation='softmax'))
+
+        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
         # Train the model
-        model.fit(X_train_embeddings, y_train_labels, epochs=10, batch_size=32, validation_split=0.2)
+        model.fit(X_train_embeddings, y_train_labels_binary, epochs=10, batch_size=32, validation_data=(X_val_embeddings, y_val_labels_binary))

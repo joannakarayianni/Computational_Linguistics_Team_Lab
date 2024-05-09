@@ -36,8 +36,16 @@ class WordEmbeddingTrainer:
 
     def get_embeddings_matrix(self):
         # TODO: Make tokenized_data into a helper function
-        tokenized_data = [word_tokenize(row[1].lower()) for _, row in self.df_train.iterrows()]
+        tokenized_data = []
 
+        for index, row in self.df_train.iterrows():
+            try:
+                tokenized_text = word_tokenize(str(row[1]).lower())
+                tokenized_data.append(tokenized_text)
+            except AttributeError as e:
+                print(f"Error processing row at index {index}: {row}")
+                raise e
+        
         # Load pre-trained Word2Vec model
         word2vec_model = Word2Vec.load("emotion_word2vec.model")
         
@@ -52,6 +60,6 @@ class WordEmbeddingTrainer:
             if embeddings:
                 mean_embedding = np.mean(embeddings, axis=0)
                 embedding_matrix[i] = mean_embedding
-
+    
         return embedding_matrix, self.df_train.iloc[:, 0]
     
