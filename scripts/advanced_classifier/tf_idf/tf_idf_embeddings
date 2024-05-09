@@ -1,0 +1,81 @@
+""" TF - IDF function for feature extraction on training set 
+-Text preprocessing/ Normalisation 
+- TF
+- IDF
+- TF - TFIDF """
+
+import pandas as pd
+import string
+import math
+
+# Load data from CSV file 
+def load_data_from_csv(file_path):
+    try:
+        return pd.read_csv(file_path, header=None)
+    except pd.errors.ParserError:
+        print("ParserError: Some lines have inconsistent number of fields. Skipping those lines.")
+        return pd.DataFrame()
+
+# Normalisation
+def preprocess_text(text):
+    # Tokenization
+    tokens = text.split()
+    # Lowercasing
+    tokens = [word.lower() for word in tokens]
+    # Removal of punctuation
+    tokens = [word.translate(str.maketrans('', '', string.punctuation)) for word in tokens]
+    # Removal of empty tokens
+    tokens = [word for word in tokens if word]
+    return tokens
+
+# TF
+def calculate_tf(tokens):
+    tf_dict = {}
+    total_words = len(tokens)
+    for word in tokens:
+        tf_dict[word] = tf_dict.get(word, 0) + 1 / total_words
+    return tf_dict
+
+# IDF
+def calculate_idf(docs):
+    idf_dict = {}
+    total_docs = len(docs)
+    all_words = set([word for doc in docs for word in doc])
+    for word in all_words:
+        doc_count = sum(1 for doc in docs if word in doc)
+        idf_dict[word] = math.log(total_docs / (1 + doc_count))
+    return idf_dict
+
+# TF-IDF
+def calculate_tfidf(doc, idf_dict):
+    tfidf_vector = {}
+    tf_dict = calculate_tf(doc)
+    for word, tf in tf_dict.items():
+        if word in idf_dict:
+            tfidf_vector[word] = tf * idf_dict[word]
+        else:
+            # Update IDF dictionary for new words
+            idf_dict[word] = math.log(len(idf_dict) + 1)  # smoothing
+            tfidf_vector[word] = tf * idf_dict[word]
+    return tfidf_vector
+
+#******************************* Testing **********************************************
+
+# Training data
+training_data = load_data_from_csv('/Users/ioannakaragianni/Desktop/Lab/isear-train.csv')
+# Preprocessing of text data
+if not training_data.empty:
+    training_data[:] = training_data[:].applymap(preprocess_text)
+# Flatten the DataFrame to convert it into a list of lists
+training_data = training_data.values.flatten()
+# Calculating IDF using training data
+idf_dict = calculate_idf(training_data[:])
+# Testing
+new_text = "Tonmoy has an arachnoid knit"
+preprocessed_new_text = preprocess_text(new_text)
+print("Preprocessed New Text:")
+print(preprocessed_new_text)
+# Calculate TF-IDF for new text using IDF dictionary calculated from training data
+tfidf_vector_new = calculate_tfidf(preprocessed_new_text, idf_dict)
+print("TF-IDF vector:")
+print(tfidf_vector_new)
