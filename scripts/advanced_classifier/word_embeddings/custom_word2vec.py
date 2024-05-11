@@ -2,10 +2,11 @@ import numpy as np
 from gensim.models import Word2Vec
 from nltk.tokenize import word_tokenize
 
-class WordEmbeddingTrainer:
+class CustomWord2Vec:
 
     def __init__(self, df_train):
         self.df_train = df_train
+        self.__generate_embeddings__()
         
     def __generate_embeddings__(self):
         # Load emotion-labeled text data
@@ -34,7 +35,7 @@ class WordEmbeddingTrainer:
         # Save the trained Word2Vec model
         word2vec_model.save("emotion_word2vec.model")
 
-    def get_embeddings_matrix(self):
+    def get_embeddings_matrix(self, ):
         # TODO: Make tokenized_data into a helper function
         tokenized_data = []
 
@@ -56,10 +57,15 @@ class WordEmbeddingTrainer:
         # Iterate over each tokenized text
         for i, tokens in enumerate(tokenized_data):
             # Calculate mean embedding for each text
+            # length of embeddings would be equal to the number of tokens in a row.
+            # each elememt within embeddings is again a vector of length vector_size
             embeddings = [word2vec_model.wv[word] for word in tokens if word in word2vec_model.wv]
+            # print(len(word2vec_model.wv[tokens[0]]))
             if embeddings:
+                # length of mean_embedding is same as the vector_size
                 mean_embedding = np.mean(embeddings, axis=0)
+                # mean embedding is just one vector formed by mean of all the vectors representing the text.
                 embedding_matrix[i] = mean_embedding
-    
+        
         return embedding_matrix, self.df_train.iloc[:, 0]
     

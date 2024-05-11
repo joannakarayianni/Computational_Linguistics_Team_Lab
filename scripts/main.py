@@ -1,8 +1,8 @@
-import dataprocessor.dataloader as dp
+import dataloader.dataloader as dp
 import baseline_classifier.main_nb as nb
 import baseline_classifier.multilabelperceptron.main_mlp as mlp
-import advanced_classifier.word_embeddings.retrain_word2vec as customEmbeddings
-import advanced_classifier.initial_nn as nn
+import advanced_classifier.neural_nets.sequential_nn as nn1
+import advanced_classifier.neural_nets.sequential_nn_with_tfidf as nn2
 
 if __name__ == "__main__":
     
@@ -27,12 +27,10 @@ if __name__ == "__main__":
     # run perceptron classifier 
     mlp.run_perceptron(df_train, df_test)
 
-    custom_embeddings = customEmbeddings.WordEmbeddingTrainer(df_train)
+    nn1_instance = nn1.SequentialNN(df_train, df_val, df_test)
+    
+    nn1_instance.train()
 
-    X_train_embeddings, y_train_labels = custom_embeddings.get_embeddings_matrix()
+    nn2_instance = nn2.SequentialNNWithTFIDF(df_train, df_val, df_test)
 
-    print(X_train_embeddings, y_train_labels)
-
-    nn1 = nn.SequentialNN(df_train, df_val, df_test)
-
-    nn1.train()
+    nn2_instance.train()

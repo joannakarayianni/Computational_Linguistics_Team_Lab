@@ -1,11 +1,9 @@
-from gensim.models import Word2Vec
-from nltk.tokenize import word_tokenize
 import numpy as np
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-import advanced_classifier.word_embeddings.retrain_word2vec as customEmbeddings 
-from collections import Counter
+import advanced_classifier.word_embeddings.custom_word2vec as w2v 
+
 
 class SequentialNN:
 
@@ -15,19 +13,21 @@ class SequentialNN:
         self.df_test = df_test
 
     def train(self):
-        # Generate word embeddings
+
+        # Fetch word embeddings and labels
 
         # For training dataset
-        embedding_model = customEmbeddings.WordEmbeddingTrainer(self.df_train)
+        embedding_model = w2v.CustomWord2Vec(self.df_train)
         X_train_embeddings, y_train_labels = embedding_model.get_embeddings_matrix()
         
         # For validation dataset
-        embedding_model_val = customEmbeddings.WordEmbeddingTrainer(self.df_val)
+        embedding_model_val = w2v.CustomWord2Vec(self.df_val)
         X_val_embeddings, y_val_labels = embedding_model_val.get_embeddings_matrix()
 
         # Define and compile neural network model
         # Define the Sequential model
         model = Sequential()
+
         # Define labels (emotions)
         y_train_labels_binary = pd.get_dummies(y_train_labels).values
         y_val_labels_binary = pd.get_dummies(y_val_labels).values
@@ -40,4 +40,4 @@ class SequentialNN:
         model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
         # Train the model
-        model.fit(X_train_embeddings, y_train_labels_binary, epochs=10, batch_size=32, validation_data=(X_val_embeddings, y_val_labels_binary))
+        model.fit(X_train_embeddings, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings, y_val_labels_binary))
