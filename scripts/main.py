@@ -1,5 +1,5 @@
 import dataloader.dataloader as dp
-import baseline_classifier.main_nb as nb
+import baseline_classifier.naivebayes.main_nb as nb
 import baseline_classifier.multilabelperceptron.main_mlp as mlp
 import advanced_classifier.neural_nets.sequential_nn as nn1
 import advanced_classifier.neural_nets.sequential_nn_with_tfidf as nn2

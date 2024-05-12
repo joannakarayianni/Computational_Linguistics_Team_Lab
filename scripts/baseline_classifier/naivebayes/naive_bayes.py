@@ -11,6 +11,8 @@ class NaiveBayes:
         self.term_counts_dictionary = defaultdict(lambda: defaultdict(int)) # dictionary that maps an emotion class to a set of terms and their respective frequencies.
         self.N = 0 # Total number of records in the dataset.
         self.vocab = set() # set of unique words in the training dataset.
+        self.prior_probs = defaultdict(int)
+        self.likelihood_probs = defaultdict(lambda: defaultdict(float))
 
 
     def construct_dictionary_and_vocab(self, df_train):
@@ -72,18 +74,19 @@ class NaiveBayes:
             # introducing a default likelihood probability for each class that would be retreived when the term is not present in the map.
             likelihood_probs[cls]['default'] = (1) / (tct_dashed + len(self.vocab))
         
-        return prior_probs, likelihood_probs
+        self.prior_probs = prior_probs
+        self.likelihood_probs = likelihood_probs
     
-    def get_the_best_class(self, text, prior_probs, likelihood_probs):
+    def get_the_best_class(self, text):
         terms = text.split()
         class_scores = defaultdict(float)
         
-        for cls in prior_probs.keys():
-            class_scores[cls] = math.log(prior_probs[cls])  # Initialize with prior probability
+        for cls in self.prior_probs.keys():
+            class_scores[cls] = math.log(self.prior_probs[cls])  # Initialize with prior probability
             for term in terms:
-                if term not in likelihood_probs[cls]:
+                if term not in self.likelihood_probs[cls]:
                     term = 'default'
-                class_scores[cls] += math.log(likelihood_probs[cls][term])
+                class_scores[cls] += math.log(self.likelihood_probs[cls][term])
 
         # use maximum a posteriori to get the best class.
         return max(class_scores, key=class_scores.get)

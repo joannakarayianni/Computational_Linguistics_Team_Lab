@@ -1,4 +1,4 @@
-class EmotionSample: # Each instance consists of label and text
+class EmotionSample:
     def __init__(self, emotions, text):
         self.emotions = emotions
         self.text = text
