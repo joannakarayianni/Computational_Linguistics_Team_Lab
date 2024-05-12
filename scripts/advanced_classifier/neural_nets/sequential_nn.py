@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-import advanced_classifier.word_embeddings.custom_word2vec as w2v 
+from advanced_classifier.word_embeddings.custom_word2vec import CustomWord2Vec
 
 
 class SequentialNN:
@@ -20,12 +20,11 @@ class SequentialNN:
         # Fetch word embeddings and labels
 
         # For training dataset
-        embedding_model = w2v.CustomWord2Vec(self.df_train)
-        X_train_embeddings = embedding_model.get_embeddings_matrix()
+        embedding_model = CustomWord2Vec(self.df_train)
+        X_train_embeddings = embedding_model.get_embeddings_matrix(self.df_train)
         
         # For validation dataset
-        embedding_model_val = w2v.CustomWord2Vec(self.df_val)
-        X_val_embeddings = embedding_model_val.get_embeddings_matrix()
+        X_val_embeddings = embedding_model.get_embeddings_matrix(self.df_val)
 
         # Define and compile neural network model
         # Define the Sequential model

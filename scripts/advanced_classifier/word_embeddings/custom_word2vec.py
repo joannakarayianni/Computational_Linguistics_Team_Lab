@@ -6,9 +6,9 @@ class CustomWord2Vec:
 
     def __init__(self, df_train):
         self.df_train = df_train
-        self.__generate_embeddings__()
+        self.__train_word2vec__()
         
-    def __generate_embeddings__(self):
+    def __train_word2vec__(self):
         # Load emotion-labeled text data
         
 
@@ -35,11 +35,11 @@ class CustomWord2Vec:
         # Save the trained Word2Vec model
         word2vec_model.save("emotion_word2vec.model")
 
-    def get_embeddings_matrix(self):
+    def get_embeddings_matrix(self, df):
         # TODO: Make tokenized_data into a helper function
         tokenized_data = []
 
-        for index, row in self.df_train.iterrows():
+        for index, row in df.iterrows():
             try:
                 tokenized_text = word_tokenize(str(row[1]).lower())
                 tokenized_data.append(tokenized_text)
@@ -59,12 +59,22 @@ class CustomWord2Vec:
             # Calculate mean embedding for each text
             # length of embeddings would be equal to the number of tokens in text/row.
             # each elememt within embeddings is again a vector of length vector_size
-            embeddings = [word2vec_model.wv[word] for word in tokens if word in word2vec_model.wv]
+            embeddings = []
+            for word in tokens:
+                if word in word2vec_model.wv:
+                    embeddings.append(word2vec_model.wv[word])
             if embeddings:
                 # length of mean_embedding is same as the vector_size
                 mean_embedding = np.mean(embeddings, axis=0)
                 # mean embedding is just one flattened vector formed by mean of all the vectors representing the text.
                 embedding_matrix[i] = mean_embedding
+            else:
+                # Handle missing embeddings by using a default value (zeros)
+                word_embedding_dim = word2vec_model.vector_size
+                default_embedding = np.zeros(word_embedding_dim)
+                # length of mean_embedding is same as the vector_size
+                print(default_embedding, len(default_embedding))
+                embedding_matrix[i] = default_embedding
         
         return embedding_matrix
     
