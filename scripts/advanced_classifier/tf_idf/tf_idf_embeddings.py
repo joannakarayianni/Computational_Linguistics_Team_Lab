@@ -61,57 +61,6 @@ class TFIDFVector:
                 tfidf_vector[word] = tf * self.idf_dict[word]
         self.tfidf_vectors.append(tfidf_vector)
 
-#******************************* Testing **********************************************
-
-# def load_data_from_csv(file_path):
-#     try:
-#         return pd.read_csv(file_path, header=None)
-#     except pd.errors.ParserError: # some lines have more than 1 columns, ignore
-#         print("ParserError: Some lines have inconsistent number of fields. Skipping those lines.")
-#         with open(file_path, 'r') as file:
-#             lines = file.readlines()
-#         data = []
-#         for line in lines:
-#             fields = line.strip().split(',')
-#             if len(fields) == 1:
-#                 # skiping incompatible lines
-#                 continue
-#             data.append(fields)
-#         return pd.DataFrame(data)
-
-# # Load data and preprocess
-# training_data = load_data_from_csv('./datasets/isear-train.csv')
-# tfidf_vectorizer = TFIDFVector()
-# if not training_data.empty:
-#     training_data = training_data.map(tfidf_vectorizer.preprocess_text)
-#     tfidf_vectorizer.calculate_idf(training_data.values.flatten())
-
-# # Transforming texts to Tf-Idf vectors
-# for row in training_data.iloc[:, 1:].values:
-#     flattened_row = [token for sublist in row for token in sublist]
-#     tfidf_vectorizer.caltulate_tfidf(flattened_row)
-
-# print(tfidf_vectorizer.idf_dict)
-
-# max_length = max(len(vector) for vector in tfidf_vectorizer.tfidf_vectors)
-# # Use padding
-# padded_tfidf_vectors = []
-# for vector in tfidf_vectorizer.tfidf_vectors:
-#     padded_vector = [vector.get(word, 0) for word in sorted(tfidf_vectorizer.idf_dict.keys())]
-#     padded_tfidf_vectors.append(padded_vector)
-# tfidf_array = np.array(padded_tfidf_vectors)
-# Print Tf-Idf array
-# print("TF-IDF:", tfidf_array)
-
-# Checking if the vectors are all 0s 
-# Iterate through each vector in the TF-IDF array
-# for vector in tfidf_array:
-#     # Check if any element in the vector is not equal to 0
-#     if any(element != 0 for element in vector):
-#        print("Non 0 elements found :", vector)
-#     else:
-#         print("All elements are 0:", vector)
-
 
 
 
