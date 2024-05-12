@@ -27,10 +27,10 @@ if __name__ == "__main__":
     # run perceptron classifier 
     mlp.run_perceptron(df_train, df_test)
 
-    nn1_instance = nn1.SequentialNN(df_train, df_val, df_test)
+    nn1_instance = nn1.SequentialNN(data_loader)
     
     nn1_instance.train()
 
-    nn2_instance = nn2.SequentialNNWithTFIDF(df_train, df_val, df_test)
+    nn2_instance = nn2.SequentialNNWithTFIDF(data_loader)
 
     nn2_instance.train()

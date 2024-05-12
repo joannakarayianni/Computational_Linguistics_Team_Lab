@@ -9,25 +9,21 @@ from gensim.models import Word2Vec
 
 class SequentialNNWithTFIDF:
 
-    def __init__(self, df_train, df_val, df_test):
-        self.df_train = df_train
-        self.df_val = df_val
-        self.df_test = df_test
+    def __init__(self, data_loader):
+        self.df_train = data_loader.df_train
+        self.df_val = data_loader.df_val
+        self.df_test = data_loader.df_test
+        self.y_train_labels = data_loader.y_train_labels
+        self.y_val_labels = data_loader.y_val_labels
+        self.y_test_labels = data_loader.y_test_labels
 
     def train(self):
 
         # Fetch word embeddings and labels
     
-
         # For training dataset
-        embedding_model = w2v.CustomWord2Vec(self.df_train)
-        embedding_model.get_embeddings_matrix()
-        X_train_embeddings, y_train_labels = embedding_model.get_embeddings_matrix()
         X_train_embeddings_with_tfidf = self.__combine_embeddings__(self.df_train)
-
         # For validation dataset
-        embedding_model_val = w2v.CustomWord2Vec(self.df_val)
-        X_val_embeddings, y_val_labels = embedding_model_val.get_embeddings_matrix()
         X_val_embeddings_with_tfidf = self.__combine_embeddings__(self.df_val)
 
         # Define and compile neural network model
@@ -35,8 +31,8 @@ class SequentialNNWithTFIDF:
         model = Sequential()
 
         # Define labels (emotions)
-        y_train_labels_binary = pd.get_dummies(y_train_labels).values
-        y_val_labels_binary = pd.get_dummies(y_val_labels).values
+        y_train_labels_binary = pd.get_dummies(self.y_train_labels).values
+        y_val_labels_binary = pd.get_dummies(self.y_val_labels).values
 
         
         # Add layers to the model one by one
@@ -47,7 +43,7 @@ class SequentialNNWithTFIDF:
         model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
         # Train the model
-        model.fit(X_train_embeddings, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings_with_tfidf, y_val_labels_binary))
+        model.fit(X_train_embeddings_with_tfidf, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings_with_tfidf, y_val_labels_binary))
 
     def __combine_embeddings__(self, df):
         word2vec_model = Word2Vec.load("emotion_word2vec.model")
@@ -60,18 +56,27 @@ class SequentialNNWithTFIDF:
             tfidf_vectorizer.caltulate_tfidf(tokenized_data)
 
         combined_embeddings = []
+
         for tfidf_vector in tfidf_vectorizer.tfidf_vectors:
             word_embeddings = []
             for token, tfidf_score in tfidf_vector.items():
                 if token in word2vec_model.wv:
                     word_embedding = word2vec_model.wv[token]
                     combined_embedding = word_embedding * tfidf_score
+                    # each of these combined embeddings is of word2vec_model vector_size.
                     word_embeddings.append(combined_embedding)
+                else:
+                    # Handle missing embeddings by using a default value (zeros)
+                    word_embedding_dim = word2vec_model.vector_size
+                    default_embedding = np.zeros(word_embedding_dim)
+                    combined_embedding = default_embedding * tfidf_score
+                    word_embeddings.append(combined_embedding)
+
             if word_embeddings:
+                # combined_embedding_mean is flattened list of size vector_size
                 combined_embedding_mean = np.mean(word_embeddings, axis=0)
                 combined_embeddings.append(combined_embedding_mean)
 
-        
         return np.array(combined_embeddings)
         
 

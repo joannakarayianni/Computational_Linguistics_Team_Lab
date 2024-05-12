@@ -12,8 +12,16 @@ class DataLoader:
         
         self.df_test = self.load_data_from_csv_file(path_to_test)
 
+        self.y_train_labels = self.get_y_labels(self.df_train)
 
-    # read the file and return the dataframe
+        self.y_val_labels = self.get_y_labels(self.df_val)
+
+        self.y_test_labels = self.get_y_labels(self.df_test)
+
+    """
+        read the file and return the dataframe
+    """
+
     def load_data_from_csv_file(self, file_name):
 
         df = None
@@ -23,8 +31,19 @@ class DataLoader:
             print("Error:", e)
         return self.__filter_invalid_rows(df)
     
+    """
+        remove invalid rows
+    """
+
     def __filter_invalid_rows(self, df):
 
         valid_emotions = ["joy", "fear", "shame", "disgust", "guilt", "anger", "sadness"]
         filtered_df = df[df.iloc[:, 0].str.split(",", expand=True)[0].isin(valid_emotions)] 
         return filtered_df
+    
+    """
+        Get all labels from a df as list 
+    """
+
+    def get_y_labels(self, df):
+        return df.iloc[:, 0]

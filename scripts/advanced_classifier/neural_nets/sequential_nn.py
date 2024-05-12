@@ -7,10 +7,13 @@ import advanced_classifier.word_embeddings.custom_word2vec as w2v
 
 class SequentialNN:
 
-    def __init__(self, df_train, df_val, df_test):
-        self.df_train = df_train
-        self.df_val = df_val
-        self.df_test = df_test
+    def __init__(self, data_loader):
+        self.df_train = data_loader.df_train
+        self.df_val = data_loader.df_val
+        self.df_test = data_loader.df_test
+        self.y_train_labels = data_loader.y_train_labels
+        self.y_val_labels = data_loader.y_val_labels
+        self.y_test_labels = data_loader.y_test_labels
 
     def train(self):
 
@@ -18,19 +21,19 @@ class SequentialNN:
 
         # For training dataset
         embedding_model = w2v.CustomWord2Vec(self.df_train)
-        X_train_embeddings, y_train_labels = embedding_model.get_embeddings_matrix()
+        X_train_embeddings = embedding_model.get_embeddings_matrix()
         
         # For validation dataset
         embedding_model_val = w2v.CustomWord2Vec(self.df_val)
-        X_val_embeddings, y_val_labels = embedding_model_val.get_embeddings_matrix()
+        X_val_embeddings = embedding_model_val.get_embeddings_matrix()
 
         # Define and compile neural network model
         # Define the Sequential model
         model = Sequential()
 
         # Define labels (emotions)
-        y_train_labels_binary = pd.get_dummies(y_train_labels).values
-        y_val_labels_binary = pd.get_dummies(y_val_labels).values
+        y_train_labels_binary = pd.get_dummies(self.y_train_labels).values
+        y_val_labels_binary = pd.get_dummies(self.y_val_labels).values
 
         # Add layers to the model one by one
         model.add(Dense(64, activation='relu', input_shape=(X_train_embeddings.shape[1],)))
