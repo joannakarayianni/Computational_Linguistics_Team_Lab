@@ -2,12 +2,13 @@ import numpy as np
 from gensim.models import Word2Vec
 from nltk.tokenize import word_tokenize
 
-class WordEmbeddingTrainer:
+class CustomWord2Vec:
 
     def __init__(self, df_train):
         self.df_train = df_train
+        self.__train_word2vec__()
         
-    def __generate_embeddings__(self):
+    def __train_word2vec__(self):
         # Load emotion-labeled text data
         
 
@@ -34,10 +35,18 @@ class WordEmbeddingTrainer:
         # Save the trained Word2Vec model
         word2vec_model.save("emotion_word2vec.model")
 
-    def get_embeddings_matrix(self):
+    def get_embeddings_matrix(self, df):
         # TODO: Make tokenized_data into a helper function
-        tokenized_data = [word_tokenize(row[1].lower()) for _, row in self.df_train.iterrows()]
+        tokenized_data = []
 
+        for index, row in df.iterrows():
+            try:
+                tokenized_text = word_tokenize(str(row[1]).lower())
+                tokenized_data.append(tokenized_text)
+            except AttributeError as e:
+                print(f"Error processing row at index {index}: {row}")
+                raise e
+        
         # Load pre-trained Word2Vec model
         word2vec_model = Word2Vec.load("emotion_word2vec.model")
         
@@ -48,10 +57,24 @@ class WordEmbeddingTrainer:
         # Iterate over each tokenized text
         for i, tokens in enumerate(tokenized_data):
             # Calculate mean embedding for each text
-            embeddings = [word2vec_model.wv[word] for word in tokens if word in word2vec_model.wv]
+            # length of embeddings would be equal to the number of tokens in text/row.
+            # each elememt within embeddings is again a vector of length vector_size
+            embeddings = []
+            for word in tokens:
+                if word in word2vec_model.wv:
+                    embeddings.append(word2vec_model.wv[word])
             if embeddings:
+                # length of mean_embedding is same as the vector_size
                 mean_embedding = np.mean(embeddings, axis=0)
+                # mean embedding is just one flattened vector formed by mean of all the vectors representing the text.
                 embedding_matrix[i] = mean_embedding
-
-        return embedding_matrix, self.df_train.iloc[:, 0]
+            else:
+                # Handle missing embeddings by using a default value (zeros)
+                word_embedding_dim = word2vec_model.vector_size
+                default_embedding = np.zeros(word_embedding_dim)
+                # length of mean_embedding is same as the vector_size
+                print(default_embedding, len(default_embedding))
+                embedding_matrix[i] = default_embedding
+        
+        return embedding_matrix
     
