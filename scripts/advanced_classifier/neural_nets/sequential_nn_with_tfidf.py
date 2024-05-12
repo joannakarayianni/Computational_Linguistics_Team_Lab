@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from keras.metrics import Precision, Recall
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import advanced_classifier.word_embeddings.custom_word2vec as w2v
@@ -40,7 +41,7 @@ class SequentialNNWithTFIDF:
         model.add(Dense(32, activation='relu'))
         model.add(Dense(7, activation='softmax'))
 
-        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy', Precision(), Recall()])
 
         # Train the model
         model.fit(X_train_embeddings_with_tfidf, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings_with_tfidf, y_val_labels_binary))
