@@ -24,6 +24,7 @@ def run_perceptron(df_train, df_test):
     print("\nEvaluation Report :::")
     evaluate_mlp(df_test, mlp_instance)
 
+from sklearn.metrics import accuracy_score
 def evaluate_mlp(df_test, mlp_instance):
 
     ####################### Test the classifier ####################### 
@@ -51,6 +52,11 @@ def evaluate_mlp(df_test, mlp_instance):
         predicted_labels.append(predicted_label)
     
     eval.test_evaluation(true_labels, predicted_labels, labels)
+   
+    # Calculating accuracy
+    accuracy = accuracy_score(true_labels, predicted_labels)
+    print("Accuracy:", accuracy)
 
 if __name__ == "__main__":
     run_perceptron()
+
