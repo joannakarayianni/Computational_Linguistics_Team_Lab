@@ -4,7 +4,7 @@ from keras.metrics import Precision, Recall
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from advanced_classifier.word_embeddings.custom_word2vec import CustomWord2Vec
-
+from advanced_classifier.neural_nets.helper import f1_score
 
 class SequentialNN:
 
@@ -40,7 +40,7 @@ class SequentialNN:
         model.add(Dense(32, activation='relu'))
         model.add(Dense(7, activation='softmax'))
 
-        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy', Precision(), Recall()])
+        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy', Precision(), Recall(), f1_score])
 
         # Train the model
         model.fit(X_train_embeddings, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings, y_val_labels_binary))
