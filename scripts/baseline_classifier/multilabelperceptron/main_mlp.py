@@ -20,7 +20,7 @@ def run_perceptron(df_train, df_test):
 
     # Training
     mlp_instance.training_of_perceptron()
-    
 
 if __name__ == "__main__":
     run_perceptron()
+
