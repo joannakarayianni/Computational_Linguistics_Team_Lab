@@ -8,10 +8,11 @@ from baseline_classifier.multilabelperceptron.emotion import EmotionSample
 import evaluation.evaluation_metrics as eval
 
 class MultiLabelPerceptron:
-    def __init__(self, df_test, train_instances, labels, train_iterations=100, eta=0.1):
+    def __init__(self, train_instances, test_instances, val_instances, labels, train_iterations=100, eta=0.1):
         self.train_instances = train_instances
+        self.df_test = test_instances
+        self.df_val = val_instances
         self.train_iterations = train_iterations
-        self.df_test = df_test
         self.labels = labels
         self.eta = eta
         

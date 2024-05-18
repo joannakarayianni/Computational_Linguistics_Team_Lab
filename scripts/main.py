@@ -25,12 +25,14 @@ if __name__ == "__main__":
     nb.run_naive_bayes(df_train, df_test)   
 
     # run perceptron classifier 
-    mlp.run_perceptron(df_train, df_test)
+    mlp.run_perceptron(data_loader)
 
-    nn1_instance = nn1.SequentialNN(data_loader)
+    # Phase 2 code for advanced classifier. Hence, commented out.
+
+    # nn1_instance = nn1.SequentialNN(data_loader)
     
-    nn1_instance.train()
+    # nn1_instance.train()
 
-    nn2_instance = nn2.SequentialNNWithTFIDF(data_loader)
+    # nn2_instance = nn2.SequentialNNWithTFIDF(data_loader)
 
-    nn2_instance.train()
+    # nn2_instance.train()
