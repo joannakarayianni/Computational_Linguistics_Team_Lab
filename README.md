@@ -17,13 +17,13 @@ pip install .
 
 ## Make sure that the datasets are present in a folder named datasets at the root level
 
-config
+• config
 
-scripts
+• scripts
 
-dataanalysis
+• dataanalysis
 
-datasets
+• datasets
 
 
 ## Run
