@@ -56,11 +56,12 @@ class MultiLabelPerceptron:
             dev_accuracy = self.evaluate_on_dev_and_test(self.df_val)
             print(f'Epoch {epoch + 1}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
         
+        ####################### Run the classifier on the test dataset ####################### 
         test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
         print(f'Test accuracy: {test_accuracy}')
 
     def evaluate_on_dev_and_test(self, df):
-        ####################### Run the classifier on the test dataset ####################### 
+
         labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
         predicted_labels = []
         true_labels = []
