@@ -6,6 +6,7 @@ This project is for the course Computational Linguistics Team Laboratory of the 
 ## Create the virtual environment:-
 
 python -m venv venv
+
 source venv/bin/activate
 
 
