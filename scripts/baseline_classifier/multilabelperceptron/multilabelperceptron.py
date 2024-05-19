@@ -53,42 +53,13 @@ class MultiLabelPerceptron:
             train_accuracy = train_correct / train_total
 
             ####################### Run the classifier on the dev dataset ####################### 
-            labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
-            predicted_labels = []
-            true_labels = []
-
-            correct_predictions = 0
-            total_samples = 0  # To count the total number of samples
-
-            for _, row in self.df_val.iterrows():
-                # unpacking the row fields.
-                emotion_class, text = row
-                            
-                actual_label = emotion_class
-                true_labels.append(actual_label)
-
-                # Make a prediction using your classifier
-                dev_sample = EmotionSample([], text)
-                max_score = -float('inf')
-                predicted_label = None
-                for label in labels:
-                    prediction = self.predict(dev_sample.features, label)
-                    if prediction > max_score:
-                        max_score = prediction
-                        predicted_label = label
-
-                # Check if the prediction is correct
-                if predicted_label == actual_label:
-                    correct_predictions += 1
-                total_samples += 1
-                predicted_labels.append(predicted_label)
-            
-
-            dev_accuracy = correct_predictions / total_samples
-
-            eval.test_evaluation(true_labels, predicted_labels, labels)
+            dev_accuracy = self.evaluate_on_dev_and_test(self.df_val)
             print(f'Epoch {epoch + 1}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
         
+        test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
+        print(f'Test accuracy: {test_accuracy}')
+
+    def evaluate_on_dev_and_test(self, df):
         ####################### Run the classifier on the test dataset ####################### 
         labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
         predicted_labels = []
@@ -97,7 +68,7 @@ class MultiLabelPerceptron:
         correct_predictions = 0
         total_samples = 0  # To count the total number of samples
 
-        for _, row in self.df_test.iterrows():
+        for _, row in df.iterrows():
             # unpacking the row fields.
             emotion_class, text = row
                         
@@ -105,11 +76,11 @@ class MultiLabelPerceptron:
             true_labels.append(actual_label)
 
             # Make a prediction using your classifier
-            test_sample = EmotionSample([], text)
+            data_instance = EmotionSample([], text)
             max_score = -float('inf')
             predicted_label = None
             for label in labels:
-                prediction = self.predict(test_sample.features, label)
+                prediction = self.predict(data_instance.features, label)
                 if prediction > max_score:
                     max_score = prediction
                     predicted_label = label
@@ -120,11 +91,10 @@ class MultiLabelPerceptron:
             total_samples += 1
             predicted_labels.append(predicted_label)
         
-
-        test_accuracy = correct_predictions / total_samples
-
+        accuracy = correct_predictions / total_samples
         eval.test_evaluation(true_labels, predicted_labels, labels)
-        print(f'Final model test accuracy: {test_accuracy}')
+
+        return accuracy
 
     # Predicting the label for a given feature list
     def predict(self, features, label_to_predict):
