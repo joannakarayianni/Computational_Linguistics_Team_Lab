@@ -1,4 +1,3 @@
-#from naive_bayes import NaiveBayes
 from baseline_classifier.naivebayes.naive_bayes import NaiveBayes
 import evaluation.evaluation_metrics as eval
 
