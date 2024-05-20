@@ -2,6 +2,9 @@
 
 This project is of the course Computational Linguistics Team Laboratory for the MSc in Computational Linguistics at the University of Stuttgart.
 
+## Python version:-
+
+We require the python version to be 3.12.2 to be compatible with all the libraries.
 
 ## Create the virtual environment:-
 
