@@ -1,13 +1,12 @@
 # Emotion Text Detection Project
 
-This project is for the course Computational Linguistics Team Laboratory of the MSc Computational Linguistics of the University of Stuttgart.
+This project is of the course Computational Linguistics Team Laboratory for the MSc in Computational Linguistics at the University of Stuttgart.
 
 
 ## Create the virtual environment:-
 
-python -m venv venv
-
-source venv/bin/activate
+python -m venv venv       
+source venv/bin/activate     
 
 
 ## Install the project and the dependencies using:- 

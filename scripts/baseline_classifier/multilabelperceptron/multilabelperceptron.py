@@ -6,15 +6,18 @@ Attributes: weights, features"""
 
 from baseline_classifier.multilabelperceptron.emotion import EmotionSample
 import evaluation.evaluation_metrics as eval
+from sklearn.model_selection import KFold
+import pandas as pd
 
 class MultiLabelPerceptron:
-    def __init__(self, train_instances, test_instances, val_instances, labels, train_iterations=100, eta=0.1):
-        self.df_train = train_instances
-        self.df_test = test_instances
-        self.df_val = val_instances
+    def __init__(self, dataloader, labels, train_iterations=100, eta=0.1, k_folds=5):
+        self.df_train = dataloader.df_train
+        self.df_val = dataloader.df_val
+        self.df_test = dataloader.df_test
         self.train_iterations = train_iterations
         self.labels = labels
         self.eta = eta
+        self.k_folds = k_folds
         
         # Attributes
         self.weights = {}  # Storing weights for each feature of each label
@@ -25,44 +28,56 @@ class MultiLabelPerceptron:
     def initialize_weights(self):
         for label in self.labels:
             self.weights[label] = {}
-            for train_instance in self.df_train:
-                feature_labels = train_instance.features
+            for _, row in self.df_train.iterrows():
+                feature_labels = row[1].split()
                 for feature_label in feature_labels:
                     if feature_label not in self.weights[label].keys():
                         self.weights[label][feature_label] = 0.0
 
     # Perceptron training with training set
     def training_of_perceptron(self):
-        for epoch in range(self.train_iterations):
-            train_correct = 0
-            train_total = 0
-            for train_instance in self.df_train:
-                features = train_instance.features 
-                for label in self.labels:
-                    # Correct label if it matches the current label
-                    y_true = 1.0 if label in train_instance.emotions else -1.0
-                    # Will be updated based on features and weights during prediction
-                    y_predicted = self.predict(features, label) # We call predict function
-                    if y_true == y_predicted:
-                        train_correct += 1
-                    train_total += 1
-                    if y_true != y_predicted:
-                        
-                        self.update_weights(features, label, y_true) # We call update_weights function
-
-            train_accuracy = train_correct / train_total
-
-            ####################### Run the classifier on the dev dataset ####################### 
-            dev_accuracy = self.evaluate_on_dev_and_test(self.df_val)
-            print(f'Epoch {epoch + 1}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
+        # Combine the training and validation datasets
+        df_combined = pd.concat([self.df_train, self.df_val])
         
-        ####################### Run the classifier on the test dataset ####################### 
-        test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
-        print(f'Test accuracy: {test_accuracy}')
+        kf = KFold(n_splits=self.k_folds, shuffle=True, random_state=42)
+
+        for train_index, val_index in kf.split(df_combined):
+            df_train_fold = df_combined.iloc[train_index]
+            df_val_fold = df_combined.iloc[val_index]
+
+            for epoch in range(self.train_iterations):
+                train_correct = 0
+                train_total = 0
+                for _, row in df_train_fold.iterrows():
+                    emotions = row[0].split()
+                    text = row[1]
+                    train_instance = EmotionSample(emotions, text)
+                    features = train_instance.features 
+                    for label in self.labels:
+                        # Correct label if it matches the current label
+                        y_true = 1.0 if label in train_instance.emotions else -1.0
+                        # Will be updated based on features and weights during prediction
+                        y_predicted = self.predict(features, label) # We call predict function
+                        if y_true == y_predicted:
+                            train_correct += 1
+                        train_total += 1
+                        if y_true != y_predicted:
+                            
+                            self.update_weights(features, label, y_true) # We call update_weights function
+
+                train_accuracy = train_correct / train_total
+
+                ####################### Run the classifier on the dev dataset ####################### 
+                dev_accuracy = self.evaluate_on_dev_and_test(df_val_fold)
+                print(f'Epoch {epoch + 1}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
+            
+            ####################### Run the classifier on the test dataset ####################### 
+            test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
+            print(f'Test accuracy: {test_accuracy}')
 
     def evaluate_on_dev_and_test(self, df):
 
-        labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
+        labels = self.labels
         predicted_labels = []
         true_labels = []
 
