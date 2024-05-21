@@ -22,7 +22,7 @@ if __name__ == "__main__":
     df_test = data_loader.df_test
 
     # naive bayes classifier
-    nb.run_naive_bayes(df_train, df_test)   
+    nb.run_naive_bayes(data_loader)   
 
     # run perceptron classifier 
     mlp.run_perceptron(data_loader)
