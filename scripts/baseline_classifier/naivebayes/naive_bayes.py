@@ -1,8 +1,11 @@
 import math
+import string
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import defaultdict
 
+# get the list of English stop words
+stop_words = set(stopwords.words('english'))
 class NaiveBayes:
 
     def __init__(self):
@@ -13,12 +16,9 @@ class NaiveBayes:
         self.vocab = set() # set of unique words in the training dataset.
         self.prior_probs = defaultdict(int)
         self.likelihood_probs = defaultdict(lambda: defaultdict(float))
-
+        
 
     def construct_dictionary_and_vocab(self, df_train):
-        # get the list of English stop words
-        stop_words = set(stopwords.words('english'))
-        
         for index, row in df_train.iterrows():
 
             # unpacking the row fields.
@@ -34,6 +34,9 @@ class NaiveBayes:
 
             for token in filtered_tokens:
                 term = self.normalizeTerm(token)
+                # Skip if the term is None (punctuation or empty)
+                if term is None:
+                    continue
                 #construct the vocabulary of unique terms
                 self.vocab.add(term)
                 # update the term count for the given class
@@ -45,14 +48,20 @@ class NaiveBayes:
     def preprocess_tokens(self, tokens, stop_words):
         # remove stop words and duplicates from the tokenized list
         filtered_tokens = set(tokens) - stop_words
-
+        
         # convert the set back to a list
         return list(filtered_tokens)
 
     
     def normalizeTerm(self, term):
         # convert the term to lower case
-        return term.lower()
+        term = term.lower()
+
+        # Check if the term is a punctuation or empty
+        if term == '' or term in string.punctuation:
+            return None
+        
+        return term
     
     def train_the_classifer(self):
         # the below probabilities are estimated probabilities since they are computed using the training set.
@@ -76,14 +85,21 @@ class NaiveBayes:
         
         self.prior_probs = prior_probs
         self.likelihood_probs = likelihood_probs
+        print(self.likelihood_probs['joy'])
     
     def get_the_best_class(self, text):
-        terms = text.split()
+        tokens = word_tokenize(text)
+        # cleanse the tokens
+        filtered_tokens = self.preprocess_tokens(tokens, stop_words)
         class_scores = defaultdict(float)
         
         for cls in self.prior_probs.keys():
             class_scores[cls] = math.log(self.prior_probs[cls])  # Initialize with prior probability
-            for term in terms:
+            for term in filtered_tokens:
+                term = self.normalizeTerm(term)
+                # Skip if the term is None (punctuation or empty)
+                if term is None:
+                    continue
                 if term not in self.likelihood_probs[cls]:
                     term = 'default'
                 class_scores[cls] += math.log(self.likelihood_probs[cls][term])
