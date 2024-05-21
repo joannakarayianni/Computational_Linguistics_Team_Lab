@@ -48,7 +48,7 @@ class NaiveBayes:
     def preprocess_tokens(self, tokens, stop_words):
         # remove stop words and duplicates from the tokenized list
         filtered_tokens = set(tokens) - stop_words
-        
+
         # convert the set back to a list
         return list(filtered_tokens)
 
@@ -85,7 +85,7 @@ class NaiveBayes:
         
         self.prior_probs = prior_probs
         self.likelihood_probs = likelihood_probs
-        print(self.likelihood_probs['joy'])
+        #print(self.likelihood_probs['joy'])
     
     def get_the_best_class(self, text):
         tokens = word_tokenize(text)
