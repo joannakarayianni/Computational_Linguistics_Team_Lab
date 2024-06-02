@@ -1,0 +1,137 @@
+###### Simple LSTM ######
+Epoch 1/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 21s 116ms/step - accuracy: 0.1511 - loss: 0.4578 - val_accuracy: 0.1481 - val_loss: 0.4100
+Epoch 2/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 115ms/step - accuracy: 0.1647 - loss: 0.4103 - val_accuracy: 0.1838 - val_loss: 0.4056
+Epoch 3/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.2662 - loss: 0.3879 - val_accuracy: 0.3328 - val_loss: 0.3699
+Epoch 4/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.4672 - loss: 0.3195 - val_accuracy: 0.4111 - val_loss: 0.3315
+Epoch 5/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.6298 - loss: 0.2463 - val_accuracy: 0.4451 - val_loss: 0.3334
+Epoch 6/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 117ms/step - accuracy: 0.7613 - loss: 0.1865 - val_accuracy: 0.4826 - val_loss: 0.3441
+Epoch 7/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 117ms/step - accuracy: 0.8342 - loss: 0.1365 - val_accuracy: 0.4861 - val_loss: 0.3670
+Epoch 8/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 117ms/step - accuracy: 0.8876 - loss: 0.0970 - val_accuracy: 0.4765 - val_loss: 0.3960
+Epoch 9/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 118ms/step - accuracy: 0.9205 - loss: 0.0743 - val_accuracy: 0.5139 - val_loss: 0.4060
+Epoch 10/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 117ms/step - accuracy: 0.9412 - loss: 0.0563 - val_accuracy: 0.5035 - val_loss: 0.4236
+Validation Loss: 0.42358192801475525
+Validation Accuracy: 0.503484308719635
+36/36 ━━━━━━━━━━━━━━━━━━━━ 1s 35ms/step 
+
+              precision    recall  f1-score   support
+
+         joy       0.67      0.68      0.67       151
+     sadness       0.58      0.54      0.56       175
+       guilt       0.43      0.35      0.39       165
+     disgust       0.60      0.39      0.47       159
+       shame       0.49      0.32      0.39       167
+        fear       0.66      0.64      0.65       171
+       anger       0.35      0.36      0.35       160
+
+   micro avg       0.54      0.47      0.50      1148
+   macro avg       0.54      0.47      0.50      1148
+weighted avg       0.54      0.47      0.50      1148
+ samples avg       0.47      0.47      0.47      1148
+
+###### Simple LSTM with TFIDF ######
+Epoch 1/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 1s 3ms/step - accuracy: 0.1642 - loss: 0.5593 - val_accuracy: 0.5009 - val_loss: 0.3993
+Epoch 2/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.4281 - loss: 0.3892 - val_accuracy: 0.5366 - val_loss: 0.3613
+Epoch 3/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6179 - loss: 0.3354 - val_accuracy: 0.5688 - val_loss: 0.3200
+Epoch 4/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.6968 - loss: 0.2790 - val_accuracy: 0.5801 - val_loss: 0.2930
+Epoch 5/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7381 - loss: 0.2375 - val_accuracy: 0.5854 - val_loss: 0.2787
+Epoch 6/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.7963 - loss: 0.1974 - val_accuracy: 0.5836 - val_loss: 0.2731
+Epoch 7/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.8150 - loss: 0.1741 - val_accuracy: 0.5793 - val_loss: 0.2715
+Epoch 8/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.8576 - loss: 0.1522 - val_accuracy: 0.5767 - val_loss: 0.2742
+Epoch 9/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.8717 - loss: 0.1341 - val_accuracy: 0.5749 - val_loss: 0.2789
+Epoch 10/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 0s 3ms/step - accuracy: 0.8926 - loss: 0.1182 - val_accuracy: 0.5688 - val_loss: 0.2839
+Validation Loss: 0.2839198112487793
+Validation Accuracy: 0.5688153505325317
+36/36 ━━━━━━━━━━━━━━━━━━━━ 0s 1ms/step 
+              precision    recall  f1-score   support
+
+         joy       0.74      0.64      0.68       151
+     sadness       0.86      0.47      0.61       175
+       guilt       0.56      0.30      0.39       165
+     disgust       0.75      0.44      0.56       159
+       shame       0.68      0.26      0.37       167
+        fear       0.90      0.58      0.71       171
+       anger       0.53      0.25      0.34       160
+
+   micro avg       0.73      0.42      0.53      1148
+   macro avg       0.72      0.42      0.52      1148
+weighted avg       0.72      0.42      0.52      1148
+ samples avg       0.85      0.42      0.42      1148
+###### LSTM GloVE embeddings and early Stopping ######
+Epoch 1/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 106ms/step - accuracy: 0.1457 - loss: 0.4426 - val_accuracy: 0.2169 - val_loss: 0.4022
+Epoch 2/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.2292 - loss: 0.4001 - val_accuracy: 0.3049 - val_loss: 0.3768
+Epoch 3/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 17s 104ms/step - accuracy: 0.3041 - loss: 0.3814 - val_accuracy: 0.3589 - val_loss: 0.3610
+Epoch 4/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.3800 - loss: 0.3584 - val_accuracy: 0.4007 - val_loss: 0.3425
+Epoch 5/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 107ms/step - accuracy: 0.4006 - loss: 0.3472 - val_accuracy: 0.4538 - val_loss: 0.3268
+Epoch 6/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.4377 - loss: 0.3308 - val_accuracy: 0.4678 - val_loss: 0.3188
+Epoch 7/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.4686 - loss: 0.3197 - val_accuracy: 0.4713 - val_loss: 0.3117
+Epoch 8/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.4798 - loss: 0.3135 - val_accuracy: 0.4904 - val_loss: 0.3067
+Epoch 9/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 106ms/step - accuracy: 0.5193 - loss: 0.2977 - val_accuracy: 0.5235 - val_loss: 0.2912
+Epoch 10/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 107ms/step - accuracy: 0.5434 - loss: 0.2864 - val_accuracy: 0.5488 - val_loss: 0.2815
+Epoch 11/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 107ms/step - accuracy: 0.5575 - loss: 0.2835 - val_accuracy: 0.5375 - val_loss: 0.2813
+Epoch 12/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 110ms/step - accuracy: 0.5631 - loss: 0.2760 - val_accuracy: 0.5523 - val_loss: 0.2765
+Epoch 13/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 107ms/step - accuracy: 0.5799 - loss: 0.2637 - val_accuracy: 0.5549 - val_loss: 0.2726
+Epoch 14/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 110ms/step - accuracy: 0.6006 - loss: 0.2621 - val_accuracy: 0.5514 - val_loss: 0.2699
+Epoch 15/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.5944 - loss: 0.2567 - val_accuracy: 0.5540 - val_loss: 0.2664
+Epoch 16/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 109ms/step - accuracy: 0.6149 - loss: 0.2478 - val_accuracy: 0.5418 - val_loss: 0.2685
+Epoch 17/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 108ms/step - accuracy: 0.6131 - loss: 0.2410 - val_accuracy: 0.5557 - val_loss: 0.2659
+Epoch 18/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 17s 104ms/step - accuracy: 0.6199 - loss: 0.2421 - val_accuracy: 0.5479 - val_loss: 0.2742
+Epoch 19/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 105ms/step - accuracy: 0.6236 - loss: 0.2417 - val_accuracy: 0.5679 - val_loss: 0.2600
+Epoch 20/20
+167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 108ms/step - accuracy: 0.6461 - loss: 0.2310 - val_accuracy: 0.5618 - val_loss: 0.2659
+Validation Loss: 0.25995856523513794
+Validation Accuracy: 0.5679442286491394
+36/36 ━━━━━━━━━━━━━━━━━━━━ 2s 40ms/step 
+
+              precision    recall  f1-score   support
+
+         joy       0.82      0.64      0.72       151
+     sadness       0.86      0.43      0.57       175
+       guilt       0.66      0.30      0.41       165
+     disgust       0.73      0.37      0.49       159
+       shame       0.84      0.25      0.39       167
+        fear       0.84      0.67      0.74       171
+       anger       0.57      0.36      0.44       160
+
+   micro avg       0.76      0.43      0.55      1148
+   macro avg       0.76      0.43      0.54      1148
+weighted avg       0.76      0.43      0.54      1148
+ samples avg       0.43      0.43      0.43      1148
