@@ -40,11 +40,11 @@ class MultiLabelPerceptron:
         df_combined = pd.concat([self.df_train, self.df_val])
         
         kf = KFold(n_splits=self.k_folds, shuffle=True, random_state=42)
-
+        fold_number = 0
         for train_index, val_index in kf.split(df_combined):
             df_train_fold = df_combined.iloc[train_index]
             df_val_fold = df_combined.iloc[val_index]
-
+            fold_number+=1
             for epoch in range(self.train_iterations):
                 train_correct = 0
                 train_total = 0
@@ -69,7 +69,8 @@ class MultiLabelPerceptron:
 
                 ####################### Run the classifier on the dev dataset ####################### 
                 dev_accuracy = self.evaluate_on_dev_and_test(df_val_fold)
-                print(f'Epoch {epoch + 1}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
+            
+                print(f'Epoch {epoch + 1} K-fold-val {fold_number}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
             
             ####################### Run the classifier on the test dataset ####################### 
             test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
