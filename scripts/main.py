@@ -3,6 +3,7 @@ import baseline_classifier.naivebayes.main_nb as nb
 import baseline_classifier.multilabelperceptron.main_mlp as mlp
 import advanced_classifier.neural_nets.sequential_nn as nn1
 import advanced_classifier.neural_nets.sequential_nn_with_tfidf as nn2
+import advanced_classifier.neural_nets.lstm as nn3
 
 if __name__ == "__main__":
     
@@ -22,10 +23,10 @@ if __name__ == "__main__":
     df_test = data_loader.df_test
 
     # naive bayes classifier
-    nb.run_naive_bayes(data_loader)   
+    # nb.run_naive_bayes(data_loader)   
 
     # run perceptron classifier 
-    mlp.run_perceptron(data_loader)
+    # mlp.run_perceptron(data_loader)
 
     # Phase 2 code for advanced classifier. Hence, commented out.
 
@@ -36,3 +37,7 @@ if __name__ == "__main__":
     # nn2_instance = nn2.SequentialNNWithTFIDF(data_loader)
 
     # nn2_instance.train()
+
+    nn3_instance = nn3.LongShortTerm(data_loader)
+
+    nn3_instance.train()
