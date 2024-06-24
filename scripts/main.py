@@ -3,7 +3,8 @@ import baseline_classifier.naivebayes.main_nb as nb
 import baseline_classifier.multilabelperceptron.main_mlp as mlp
 import advanced_classifier.neural_nets.sequential_nn as nn1
 import advanced_classifier.neural_nets.sequential_nn_with_tfidf as nn2
-import advanced_classifier.neural_nets.lstm as nn3
+import advanced_classifier.lstm.lstm as lstm
+import advanced_classifier.lstm.lstm_tfidf_simple as lstmtfidf
 
 if __name__ == "__main__":
     
@@ -38,6 +39,10 @@ if __name__ == "__main__":
 
     # nn2_instance.train()
 
-    nn3_instance = nn3.LongShortTerm(data_loader)
+    nn3_instance = lstm.LongShortTerm(data_loader)
 
     nn3_instance.train()
+
+    nn4_instance = lstmtfidf.LSTM_Tf_Idf(data_loader)
+
+    nn4_instance.train()

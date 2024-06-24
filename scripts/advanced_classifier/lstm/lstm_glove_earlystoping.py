@@ -51,7 +51,7 @@ X_val = pad_sequences(val_sequences, maxlen=max_sequence_length)
 # validation labels
 y_val = mlb.transform(val_df['emotion'].apply(lambda x: [x]))
 
-# Load GloVe embeddings, 50-100-200-300 dimensions
+# Load GloVe embeddings, 100 dimensions
 embedding_dim = 100
 embedding_index = {}
 with open(f'glove.6B.{embedding_dim}d.txt', encoding='utf8') as f:

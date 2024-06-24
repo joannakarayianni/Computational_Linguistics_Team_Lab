@@ -1,4 +1,4 @@
-###### Simple LSTM ######
+###### Simple LSTM with seeds ######
 Epoch 1/10
 167/167 ━━━━━━━━━━━━━━━━━━━━ 21s 116ms/step - accuracy: 0.1511 - loss: 0.4578 - val_accuracy: 0.1481 - val_loss: 0.4100
 Epoch 2/10
@@ -37,6 +37,42 @@ Validation Accuracy: 0.503484308719635
    macro avg       0.54      0.47      0.50      1148
 weighted avg       0.54      0.47      0.50      1148
  samples avg       0.47      0.47      0.47      1148
+
+##Simple lstm with seeds and early stopping##
+""" performed 0.04 worse """
+Epoch 1/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 21s 116ms/step - accuracy: 0.1381 - loss: 0.4567 - val_accuracy: 0.1638 - val_loss: 0.4101
+Epoch 2/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 115ms/step - accuracy: 0.1743 - loss: 0.4094 - val_accuracy: 0.2003 - val_loss: 0.3999
+Epoch 3/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.2715 - loss: 0.3847 - val_accuracy: 0.3084 - val_loss: 0.3674
+Epoch 4/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 119ms/step - accuracy: 0.4298 - loss: 0.3297 - val_accuracy: 0.4503 - val_loss: 0.3364
+Epoch 5/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.6148 - loss: 0.2577 - val_accuracy: 0.4808 - val_loss: 0.3227
+Epoch 6/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.7497 - loss: 0.1927 - val_accuracy: 0.4887 - val_loss: 0.3340
+Epoch 7/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 115ms/step - accuracy: 0.8446 - loss: 0.1345 - val_accuracy: 0.4791 - val_loss: 0.3656
+Epoch 8/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 19s 116ms/step - accuracy: 0.8834 - loss: 0.1040 - val_accuracy: 0.4895 - val_loss: 0.3776
+Validation Loss: 0.3227216899394989
+Validation Accuracy: 0.48083624243736267
+36/36 ━━━━━━━━━━━━━━━━━━━━ 1s 34ms/step 
+              precision    recall  f1-score   support
+
+         joy       0.65      0.71      0.68       151
+     sadness       0.69      0.41      0.51       175
+       guilt       0.47      0.30      0.36       165
+     disgust       0.73      0.21      0.32       159
+       shame       0.62      0.20      0.30       167
+        fear       0.72      0.56      0.63       171
+       anger       0.51      0.14      0.22       160
+
+   micro avg       0.63      0.36      0.46      1148
+   macro avg       0.63      0.36      0.43      1148
+weighted avg       0.63      0.36      0.43      1148
+ samples avg       0.36      0.36      0.36      1148
 
 ###### Simple LSTM with TFIDF ######
 Epoch 1/10
@@ -135,3 +171,44 @@ Validation Accuracy: 0.5679442286491394
    macro avg       0.76      0.43      0.54      1148
 weighted avg       0.76      0.43      0.54      1148
  samples avg       0.43      0.43      0.43      1148
+
+## lstm bert ##
+Epoch 1/10
+ 16/167 ━━━━━━━━━━━━━━━━━━━━ 10:55 4s/step - accuracy: 0.1 17/167 ━━━━━━━━━━━━━━━━━━━━ 10:55 4s/step - accuracy: 0.1 18/167 ━━━━━━━━━━━━━━━━━━━━ 10:56 4s/step - accuracy: 0.1 19/167 ━━━━━━━━━━━━━━━━━━━━ 11:00 4s/step - accuracy: 0.1 20/167 ━━━━━━━━━━━━━━━━━━━━ 11:04 5s/step - accuracy: 0.1 82/167 ━━━━━━━━━━━━━━━━━━━━ 6:08 4s/step - accuracy: 0.18 83/167 ━━━━━━━━━━━━━━━━━━━━ 6:03 4s/step - accuracy: 0.18 93/167 ━━━━━━━━━━━━━━━━━━━━ 5:21 4s/step - accuracy: 0.18 94/167 ━━━━━━━━━━━━━━━━━━━━ 5:18 4s/step - accuracy: 0.19 95/167 ━━━━━━━━━━━━━━━━━━━━ 5:14 4s/step - accuracy: 0.19100/167 ━━━━━━━━━━━━━━━━━━━━ 4:54 4s/step - accuracy: 0.19101/167 ━━━━━━━━━━━━━━━━━━━━ 4:50 4s/step - accuracy: 0.19102/167 ━━━━━━━━━━━━━━━━━━━━ 4:46 4s/step - accuracy: 0.19103/167 ━━━━━━━━━━━━━━━━━━━━ 4:42 4s/step - accuracy: 0.19104/167 ━━━━━━━━━━━━━━━━━━━━ 4:37 4s/step - accuracy: 0.19105/167 ━━━━━━━━━━━━━━━━━━━━ 4:33 4s/step - accuracy: 0.19106/167 ━━━━━━━━━━━━━━━━━━━━ 4:28 4s/step - accuracy: 0.19107/167 ━━━━━━━━━━━━━━━━━━━━ 4:24 4s/step - accuracy: 0.19108/167 ━━━━━━━━━━━━━━━━━━━━ 4:19 4s/step - accuracy: 0.19109/167 ━━━━━━━━━━━━━━━━━━━━ 4:15 4s/step - accuracy: 0.19110/167 ━━━━━━━━━━━━━━━━━━━━ 4:10 4s/step - accuracy: 0.19111/167 ━━━━━━━━━━━━━━━━━━━━ 4:06 4s/step - accuracy: 0.19121/167 ━━━━━━━━━━━━━━━━━━━━ 3:23 4s/step - accuracy: 0.19122/167 ━━━━━━━━━━━━━━━━━━━━ 3:19 4s/step - accuracy: 0.19123/167 ━━━━━━━━━━━━━━━━━━━━ 3:16 4s/step - accuracy: 0.20124/167 ━━━━━━━━━━━━━━━━━━━━ 3:11 4s/step - accuracy: 0.20125/167 ━━━━━━━━━━━━━━━━━━━━ 3:07 4s/step - accuracy: 0.20126/167 ━━━━━━━━━━━━━━━━━━━━ 3:03 4s/step - accuracy: 0.20127/167 ━━━━━━━━━━━━━━━━━━━━ 2:58 4s/step - accuracy: 0.20128/167 ━━━━━━━━━━━━━━━━━━━━ 2:54 4s/step - accuracy: 0.20129/167 ━━━━━━━━━━━━━━━━━━━━ 2:49 4s/step - accuracy: 0.20130/167 ━━━━━━━━━━━━━━━━━━━━ 2:45 4s/step - accuracy: 0.20131/167 ━━━━━━━━━━━━━━━━━━━━ 2:41 4s/step - accuracy: 0.20132/167 ━━━━━━━━━━━━━━━━━━━━ 2:36 4s/step - accuracy: 0.20133/167 ━━━━━━━━━━━━━━━━━━━━ 2:32 4s/step - accuracy: 0.20134/167 ━━━━━━━━━━━━━━━━━━━━ 2:27 4s/step - accuracy: 0.20135/167 ━━━━━━━━━━━━━━━━━━━━ 2:23 4s/step - accuracy: 0.20136/167 ━━━━━━━━━━━━━━━━━━━━ 2:18 4s/step - accuracy: 0.20137/167 ━━━━━━━━━━━━━━━━━━━━ 2:14 4s/step - accuracy: 0.20138/167 ━━━━━━━━━━━━━━━━━━━━ 2:09 4s/step - accuracy: 0.20142/167 ━━━━━━━━━━━━━━━━━━━━ 1:52 5s/step - accuracy: 0.20143/167 ━━━━━━━━━━━━━━━━━━━━ 1:48 5s/step - accuracy: 0.20144/167 ━━━━━━━━━━━━━━━━━━━━ 1:43 5s/step - accuracy: 0.20145/167 ━━━━━━━━━━━━━━━━━━━━ 1:39 5s/step - accuracy: 0.20146/167 ━━━━━━━━━━━━━━━━━━━━ 1:34 5s/step - accuracy: 0.20147/167 ━━━━━━━━━━━━━━━━━━━━ 1:30 5s/step - accuracy: 0.20148/167 ━━━━━━━━━━━━━━━━━━━━ 1:25 5s/step - accuracy: 0.20149/167 ━━━━━━━━━━━━━━━━━━━━ 1:21 5s/step - accuracy: 0.20150/167 ━━━━━━━━━━━━━━━━━━━━ 1:17 5s/step - accuracy: 0.20151/167 ━━━━━━━━━━━━━━━━━━━━ 1:12 5s/step - accuracy: 0.20152/167 ━━━━━━━━━━━━━━━━━━━━ 1:08 5s/step - accuracy: 0.21153/167 ━━━━━━━━━━━━━━━━━━━━ 1:03 5s/step - accuracy: 0.21154/167 ━━━━━━━━━━━━━━━━━━━━ 59s 5s/step - accuracy: 0.210155/167 ━━━━━━━━━━━━━━━━━━━━ 54s 5s/step - accuracy: 0.211156/167 ━━━━━━━━━━━━━━━━━━━━ 50s 5s/step - accuracy: 0.211157/167 ━━━━━━━━━━━━━━━━━━━━ 45s 5s/step - accuracy: 0.211158/167 ━━━━━━━━━━━━━━━━━━━━ 40s 5s/step - accuracy: 0.212159/167 ━━━━━━━━━━━━━━━━━━━━ 36s 5s/step - accuracy: 0.212160/167 ━━━━━━━━━━━━━━━━━━━━ 31s 5s/step - accuracy: 0.213161/167 ━━━━━━━━━━━━━━━━━━━━ 27s 5s/step - accuracy: 0.213162/167 ━━━━━━━━━━━━━━━━━━━━ 22s 5s/step - accuracy: 0.213167/167 ━━━━━━━━━━━━━━━━━━━━ 915s 5s/step - accuracy: 0.2160 - loss: 0.4440 - val_accuracy: 0.4538 - val_loss: 0.3488
+Epoch 2/10
+ 93/167 ━━━━━━━━━━━━━━━━━━━━ 5:11 4s/step - accuracy: 0.43 94/167 ━━━━━━━━━━━━━━━━━━━━ 5:07 4s/step - accuracy: 0.43 95/167 ━━━━━━━━━━━━━━━━━━━━ 5:04 4s/step - accuracy: 0.43 96/167 ━━━━━━━━━━━━━━━━━━━━ 5:01 4s/step - accuracy: 0.43 97/167 ━━━━━━━━━━━━━━━━━━━━ 4:57 4s/step - accuracy: 0.43 98/167 ━━━━━━━━━━━━━━━━━━━━ 4:53 4s/step - accuracy: 0.43 99/167 ━━━━━━━━━━━━━━━━━━━━ 4:49 4s/step - accuracy: 0.43100/167 ━━━━━━━━━━━━━━━━━━━━ 4:45 4s/step - accuracy: 0.43101/167 ━━━━━━━━━━━━━━━━━━━━ 4:41 4s/step - accuracy: 0.43102/167 ━━━━━━━━━━━━━━━━━━━━ 4:37 4s/step - accuracy: 0.43103/167 ━━━━━━━━━━━━━━━━━━━━ 4:33 4s/step - accuracy: 0.43104/167 ━━━━━━━━━━━━━━━━━━━━ 4:29 4s/step - accuracy: 0.43105/167 ━━━━━━━━━━━━━━━━━━━━ 4:25 4s/step - accuracy: 0.43106/167 ━━━━━━━━━━━━━━━━━━━━ 4:20 4s/step - accuracy: 0.43107/167 ━━━━━━━━━━━━━━━━━━━━ 4:16 4s/step - accuracy: 0.43108/167 ━━━━━━━━━━━━━━━━━━━━ 4:12 4s/step - accuracy: 0.43109/167 ━━━━━━━━━━━━━━━━━━━━ 4:08 4s/step - accuracy: 0.43110/167 ━━━━━━━━━━━━━━━━━━━━ 4:04 4s/step - accuracy: 0.43111/167 ━━━━━━━━━━━━━━━━━━━━ 4:00 4s/step - accuracy: 0.43112/167 ━━━━━━━━━━━━━━━━━━━━ 3:56 4s/step - accuracy: 0.43113/167 ━━━━━━━━━━━━━━━━━━━━ 3:52 4s/step - accuracy: 0.43114/167 ━━━━━━━━━━━━━━━━━━━━ 3:48 4s/step - accuracy: 0.43115/167 ━━━━━━━━━━━━━━━━━━━━ 3:44 4s/step - accuracy: 0.43116/167 ━━━━━━━━━━━━━━━━━━━━ 3:39 4s/step - accuracy: 0.43117/167 ━━━━━━━━━━━━━━━━━━━━ 3:35 4s/step - accuracy: 0.43118/167 ━━━━━━━━━━━━━━━━━━━━ 3:31 4s/step - accuracy: 0.43119/167 ━━━━━━━━━━━━━━━━━━━━ 3:27 4s/step - accuracy: 0.43120/167 ━━━━━━━━━━━━━━━━━━━━ 3:23 4s/step - accuracy: 0.43121/167 ━━━━━━━━━━━━━━━━━━━━ 3:19 4s/step - accuracy: 0.43122/167 ━━━━━━━━━━━━━━━━━━━━ 3:15 4s/step - accuracy: 0.43123/167 ━━━━━━━━━━━━━━━━━━━━ 3:11 4s/step - accuracy: 0.43124/167 ━━━━━━━━━━━━━━━━━━━━ 3:07 4s/step - accuracy: 0.43125/167 ━━━━━━━━━━━━━━━━━━━━ 3:02 4s/step - accuracy: 0.43126/167 ━━━━━━━━━━━━━━━━━━━━ 2:58 4s/step - accuracy: 0.43127/167 ━━━━━━━━━━━━━━━━━━━━ 2:54 4s/step - accuracy: 0.43128/167 ━━━━━━━━━━━━━━━━━━━━ 2:50 4s/step - accuracy: 0.43129/167 ━━━━━━━━━━━━━━━━━━━━ 2:46 4s/step - accuracy: 0.43130/167 ━━━━━━━━━━━━━━━━━━━━ 2:41 4s/step - accuracy: 0.43131/167 ━━━━━━━━━━━━━━━━━━━━ 2:37 4s/step - accuracy: 0.43132/167 ━━━━━━━━━━━━━━━━━━━━ 2:33 4s/step - accuracy: 0.43133/167 ━━━━━━━━━━━━━━━━━━━━ 2:28 4s/step - accuracy: 0.43134/167 ━━━━━━━━━━━━━━━━━━━━ 2:24 4s/step - accuracy: 0.43135/167 ━━━━━━━━━━━━━━━━━━━━ 2:20 4s/step - accuracy: 0.43136/167 ━━━━━━━━━━━━━━━━━━━━ 2:16 4s/step - accuracy: 0.43137/167 ━━━━━━━━━━━━━━━━━━━━ 2:11 4s/step - accuracy: 0.43138/167 ━━━━━━━━━━━━━━━━━━━━ 2:07 4s/step - accuracy: 0.43139/167 ━━━━━━━━━━━━━━━━━━━━ 2:03 4s/step - accuracy: 0.43140/167 ━━━━━━━━━━━━━━━━━━━━ 1:58 4s/step - accuracy: 0.43141/167 ━━━━━━━━━━━━━━━━━━━━ 1:54 4s/step - accuracy: 0.43142/167 ━━━━━━━━━━━━━━━━━━━━ 1:50 4s/step - accuracy: 0.43167/167 ━━━━━━━━━━━━━━━━━━━━ 885s 5s/step - accuracy: 0.4374 - loss: 0.3458 - val_accuracy: 0.4913 - val_loss: 0.3205
+Epoch 3/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 857s 5s/step - accuracy: 0.4944 - loss: 0.3190 - val_accuracy: 0.5253 - val_loss: 0.3066
+Epoch 4/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 855s 5s/step - accuracy: 0.5279 - loss: 0.3042 - val_accuracy: 0.5479 - val_loss: 0.2976
+Epoch 5/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 850s 5s/step - accuracy: 0.5520 - loss: 0.2939 - val_accuracy: 0.5392 - val_loss: 0.2941
+Epoch 6/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 855s 5s/step - accuracy: 0.5628 - loss: 0.2886 - val_accuracy: 0.5679 - val_loss: 0.2887
+Epoch 7/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 879s 5s/step - accuracy: 0.5677 - loss: 0.2856 - val_accuracy: 0.5679 - val_loss: 0.2864
+Epoch 8/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 839s 5s/step - accuracy: 0.5739 - loss: 0.2790 - val_accuracy: 0.5784 - val_loss: 0.2832
+Epoch 9/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 864s 5s/step - accuracy: 0.5935 - loss: 0.2718 - val_accuracy: 0.5793 - val_loss: 0.2811
+Epoch 10/10
+167/167 ━━━━━━━━━━━━━━━━━━━━ 1049s 6s/step - accuracy: 0.6004 - loss: 0.2694 - val_accuracy: 0.5819 - val_loss: 0.2795
+Validation Loss: 0.27949288487434387
+Validation Accuracy: 0.5818815231323242
+36/36 ━━━━━━━━━━━━━━━━━━━━ 150s 4s/step
+/Users/ioannakaragianni/Documents/GitHub/Computational_Linguistics_Team_Lab/venv/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+              precision    recall  f1-score   support
+
+         joy       0.86      0.71      0.78       151
+     sadness       0.90      0.35      0.51       175
+       guilt       0.60      0.05      0.10       165
+     disgust       0.69      0.25      0.37       159
+       shame       0.81      0.08      0.14       167
+        fear       0.88      0.47      0.62       171
+       anger       0.50      0.12      0.19       160
+
+   micro avg       0.80      0.29      0.42      1148
+   macro avg       0.75      0.29      0.39      1148
+weighted avg       0.75      0.29      0.38      1148
+ samples avg       0.28      0.29      0.29      1148
