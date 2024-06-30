@@ -4,11 +4,12 @@ from keras.metrics import Precision, Recall
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import advanced_classifier.word_embeddings.custom_word2vec as w2v
+from sklearn.metrics import classification_report
 from advanced_classifier.tf_idf.tf_idf_embeddings import TFIDFVector 
 from gensim.models import Word2Vec
 
 
-class SequentialNNWithTFIDF:
+class SequentialNNWithWord2VecTFIDF:
 
     def __init__(self, data_loader):
         self.df_train = data_loader.df_train
@@ -27,6 +28,9 @@ class SequentialNNWithTFIDF:
         # For validation dataset
         X_val_embeddings_with_tfidf = self.__combine_embeddings__(self.df_val)
 
+        # emotions
+        emotions = ['joy', 'sadness', 'guilt', 'disgust', 'shame', 'fear', 'anger']
+
         # Define and compile neural network model
         # Define the Sequential model
         model = Sequential()
@@ -41,10 +45,25 @@ class SequentialNNWithTFIDF:
         model.add(Dense(32, activation='relu'))
         model.add(Dense(7, activation='softmax'))
 
-        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy', Precision(), Recall()])
+        model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
         # Train the model
-        model.fit(X_train_embeddings_with_tfidf, y_train_labels_binary, epochs=15, batch_size=32, validation_data=(X_val_embeddings_with_tfidf, y_val_labels_binary))
+        model.fit(X_train_embeddings_with_tfidf, y_train_labels_binary, epochs=10, batch_size=32, validation_data=(X_val_embeddings_with_tfidf, y_val_labels_binary))
+
+        # Evaluate the model on validation set
+        loss, accuracy = model.evaluate(X_val_embeddings_with_tfidf, y_val_labels_binary, verbose=0)
+        print(f'Validation Loss: {loss}')
+        print(f'Validation Accuracy: {accuracy}')
+
+        # Predict on validation set
+        y_pred = model.predict(X_val_embeddings_with_tfidf)
+        
+        y_pred_binary = np.argmax(y_pred, axis=1)
+        y_val_binary = np.argmax(y_val_labels_binary, axis=1)
+
+
+        # Report
+        print(classification_report(y_val_binary, y_pred_binary, target_names=emotions))
 
     def __combine_embeddings__(self, df):
         word2vec_model = Word2Vec.load("emotion_word2vec.model")
