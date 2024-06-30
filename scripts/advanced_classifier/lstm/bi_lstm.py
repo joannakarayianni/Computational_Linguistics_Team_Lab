@@ -6,10 +6,10 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import MultiLabelBinarizer
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout
+from tensorflow.keras.layers import Embedding, Bidirectional, LSTM, Dense, Dropout
 from sklearn.metrics import classification_report
 
-class LongShortTerm:
+class BiLongShortTerm:
     
     def __init__(self, data_loader):
         self.df_train = data_loader.df_train
@@ -29,7 +29,7 @@ class LongShortTerm:
         # Set seeds for reproducibility
         self.seeds()
 
-        # training data
+        # Training data
         train_df = pd.read_csv('datasets/isear-train.csv', header=None, names=['emotion', 'text'], on_bad_lines='skip')
 
         # Ensure all sentences are strings
@@ -45,7 +45,7 @@ class LongShortTerm:
         train_sequences = tokenizer.texts_to_sequences(train_df['text'])
         word_index = tokenizer.word_index
 
-        # Pading training sequences - all the same length
+        # Padding training sequences - all the same length
         max_sequence_length = 100
         X_train = pad_sequences(train_sequences, maxlen=max_sequence_length)
 
@@ -56,7 +56,7 @@ class LongShortTerm:
         # Validation data
         val_df = pd.read_csv('datasets/isear-val.csv', header=None, names=['emotion', 'text'], on_bad_lines='skip')
 
-        # all sentences are strings
+        # Ensure all sentences are strings
         val_df['text'] = val_df['text'].astype(str)
 
         # Including the 7 emotions
@@ -65,7 +65,7 @@ class LongShortTerm:
         # Tokenizing the validation text
         val_sequences = tokenizer.texts_to_sequences(val_df['text'])
 
-        # Pading validation sequences
+        # Padding validation sequences
         X_val = pad_sequences(val_sequences, maxlen=max_sequence_length)
 
         # Encode the validation labels
@@ -75,12 +75,12 @@ class LongShortTerm:
         vocab_size = len(word_index) + 1
         embedding_dim = 100
 
-        # LSTM 
+        # Bidirectional LSTM
         model = Sequential()
         model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_sequence_length))
-        model.add(LSTM(units=128, return_sequences=True))
+        model.add(Bidirectional(LSTM(units=128, return_sequences=True)))
         model.add(Dropout(0.2))
-        model.add(LSTM(units=64))
+        model.add(Bidirectional(LSTM(units=64)))
         model.add(Dense(units=len(emotions), activation='sigmoid'))
 
         # Compile 
@@ -101,10 +101,12 @@ class LongShortTerm:
         # Report
         print(classification_report(y_val, y_pred, target_names=emotions))
 
+        ### Testing for test set
+
         # Tokenizing the test text
         test_sequences = tokenizer.texts_to_sequences(self.df_test.iloc[:, 1])
 
-        # Pading test sequences
+        # Padding test sequences
         X_test = pad_sequences(test_sequences, maxlen=max_sequence_length)
 
         # Encoding test labels
@@ -122,5 +124,4 @@ class LongShortTerm:
         # Report
         print("Results for the test set:")
         print(classification_report(y_test, y_pred, target_names=emotions))
-
 
