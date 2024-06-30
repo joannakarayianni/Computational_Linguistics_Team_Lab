@@ -7,6 +7,8 @@ import advanced_classifier.lstm.lstm_glove_simple as lstmglove
 import advanced_classifier.lstm.lstm_tfidf_simple as lstmtfidf
 import advanced_classifier.lstm.bi_lstm as bilstm
 import advanced_classifier.lstm.lstm as lstm
+import advanced_classifier.neural_nets.sequential_nn_word2vec_dropout as nn4
+import advanced_classifier.neural_nets.sequential_nn_glove as nn5
 
 if __name__ == "__main__":
     
@@ -26,20 +28,25 @@ if __name__ == "__main__":
     df_test = data_loader.df_test
 
     # naive bayes classifier
-    # nb.run_naive_bayes(data_loader)   
+    nb.run_naive_bayes(data_loader)   
 
     # run perceptron classifier 
-    # mlp.run_perceptron(data_loader)
+    mlp.run_perceptron(data_loader)
 
     # Phase 2 code for advanced classifier.
 
-    # nn1_instance = nn1.SequentialNN(data_loader)
+    print("Running Sequential with word2vec!!!")
+
+    nn1_instance = nn1.SequentialNN(data_loader)
     
-    # nn1_instance.train()
+    nn1_instance.train()
 
-    # nn2_instance = nn2.SequentialNNWithTFIDF(data_loader)
+    print("Running Sequential with word2vec & TF-IDF!!!")
 
-    # nn2_instance.train()
+    nn2_instance = nn2.SequentialNNWithWord2VecTFIDF(data_loader)
+
+    nn2_instance.train()
+
 
     print(" ******************** Results for LSTM with word Embeddings ********************")
     nn3_instance = lstm.LongShortTerm(data_loader)
@@ -61,5 +68,15 @@ if __name__ == "__main__":
 
 
 
+    print("Sequential NN with word2vec and dropout!!!")
 
+    nn3_instance = nn4.SequentialNNWord2VecDropout(data_loader)
+    
+    nn3_instance.train()
+
+    print("Sequential NN with glove (6B, 300d)!!!")
+
+    nn4_instance = nn5.SequentialNNGlove(data_loader, 'scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt')
+    
+    nn4_instance.train()
 
