@@ -1,27 +1,27 @@
-## TRAIN SET - VALIDATION SET
+## VALIDATION SET
 ## lstm bert ##
-167/167 ━━━━━━━━━━━━━━━━━━━━ 889s 5s/step - accuracy: 0.5977 - loss: 0.2755 - val_accuracy: 0.5714 - val_loss: 0.2793
-Validation Loss: 0.2792874276638031
-Validation Accuracy: 0.5714285969734192
-36/36 ━━━━━━━━━━━━━━━━━━━━ 152s 4s/step
+Validation Loss: 0.2150445282459259
+Validation Accuracy: 0.6898954510688782
+Results on validation set:
               precision    recall  f1-score   support
 
-         joy       0.90      0.65      0.75       151
-     sadness       0.82      0.45      0.58       175
-       guilt       0.63      0.07      0.13       165
-     disgust       0.71      0.32      0.44       159
-       shame       0.75      0.09      0.16       167
-        fear       0.90      0.47      0.62       171
-       anger       0.48      0.16      0.24       160
+         joy       0.91      0.87      0.89       151
+     sadness       0.87      0.65      0.74       175
+       guilt       0.65      0.61      0.62       165
+     disgust       0.74      0.65      0.69       159
+       shame       0.73      0.34      0.47       167
+        fear       0.86      0.72      0.78       171
+       anger       0.58      0.66      0.62       160
 
-   micro avg       0.79      0.31      0.45      1148
-   macro avg       0.74      0.31      0.42      1148
-weighted avg       0.74      0.31      0.42      1148
- samples avg       0.31      0.31      0.31      1148
+   micro avg       0.76      0.64      0.69      1148
+   macro avg       0.76      0.64      0.69      1148
+weighted avg       0.76      0.64      0.69      1148
+ samples avg       0.64      0.64      0.64      1148
 
 ## LSTM with word embeddings ##
-Epoch 10/10
-167/167 ━━━━━━━━━━━━━━━━━━━━ 20s 119ms/step - accuracy: 0.9226 - loss: 0.0727 - val_accuracy: 0.5139 - val_loss: 0.4198
+Validation Loss: 0.4198080897331238
+Validation Accuracy: 0.5139372944831848
+
               precision    recall  f1-score   support
 
          joy       0.69      0.68      0.68       151
@@ -37,8 +37,6 @@ Epoch 10/10
 weighted avg       0.54      0.48      0.51      1148
  samples avg       0.48      0.48      0.48      1148
 
-Test Loss: 0.4233384430408478
-Test Accuracy: 0.5109170079231262
 ## lstm with tf-idf embeddings ## 
 Epoch 10/10
 167/167 ━━━━━━━━━━━━━━━━━━━━ 1s 4ms/step - accuracy: 0.8814 - loss: 0.1256 - val_accuracy: 0.5706 - val_loss: 0.2833
@@ -81,15 +79,13 @@ Validation Accuracy: 0.5043553709983826
 weighted avg       0.55      0.48      0.51      1148
  samples avg       0.48      0.48      0.48      1148
 
-Test Loss: 0.4717378318309784
-Test Accuracy: 0.491703063249588
 
 ## lstm with glove embeddings ##
 Epoch 10/10
 167/167 ━━━━━━━━━━━━━━━━━━━━ 18s 105ms/step - accuracy: 0.6594 - loss: 0.2220 - val_accuracy: 0.5287 - val_loss: 0.2936
 Validation Loss: 0.2936084270477295
 Validation Accuracy: 0.5287456512451172
-36/36 ━━━━━━━━━━━━━━━━━━━━ 1s 34ms/step 
+
               precision    recall  f1-score   support
 
          joy       0.62      0.74      0.67       151
@@ -107,8 +103,27 @@ weighted avg       0.66      0.43      0.51      1148
 
  ## PERFORMANCE ON TEST SET
 
+ ## BERT uncased ##
+Test Loss: 0.213784322142601
+Test Accuracy: 0.7004366517066956
+Results on the test set:
+              precision    recall  f1-score   support
+
+         joy       0.93      0.78      0.85       162
+     sadness       0.81      0.64      0.71       151
+       guilt       0.70      0.62      0.66       155
+     disgust       0.78      0.62      0.69       173
+       shame       0.75      0.44      0.55       164
+        fear       0.80      0.73      0.76       164
+       anger       0.59      0.62      0.61       176
+
+   micro avg       0.76      0.63      0.69      1145
+   macro avg       0.77      0.64      0.69      1145
+weighted avg       0.77      0.63      0.69      1145
+ samples avg       0.63      0.63      0.63      1145
+
  ## bi-lstm with word embeddings ## 
- Test Loss: 0.4717378318309784
+Test Loss: 0.4717378318309784
 Test Accuracy: 0.491703063249588
 36/36 ━━━━━━━━━━━━━━━━━━━━ 2s 44ms/step             
  precision    recall  f1-score   support
@@ -165,7 +180,7 @@ weighted avg       0.55      0.49      0.51      1145
  samples avg       0.48      0.49      0.49      1145
 
  ## lstm with tf-idf embeddings ##
- Test Loss: 0.29158779978752136
+Test Loss: 0.29158779978752136
 Test Accuracy: 0.5598253011703491
 36/36 ━━━━━━━━━━━━━━━━━━━━ 0s 626us/step
 Results for the test set:

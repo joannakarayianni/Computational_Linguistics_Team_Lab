@@ -45,9 +45,8 @@ if __name__ == "__main__":
     nn3_instance = lstm.LongShortTerm(data_loader)
     nn3_instance.train()
     
-    
     print(" ******************** Results for LSTM with TF-IDF Embeddings ********************")
-    nn4_instance = lstmtfidf.LSTM_Tf_Idf(path_to_train, path_to_val)
+    nn4_instance = lstmtfidf.LSTM_Tf_Idf(path_to_train, path_to_val, path_to_test)
     nn4_instance.build_model()
     nn4_instance.train()
     nn4_instance.evaluate_test_set()
@@ -58,7 +57,7 @@ if __name__ == "__main__":
     
     print(" ******************** Results for LSTM with GloVE Embeddings ********************")
     nn6_instance = lstmglove.LSTM_GloVe(data_loader)
-    nn6_instance.train()
+    nn6_instance.train() 
 
 
 
