@@ -1,4 +1,7 @@
-""" Run this file through the main.py """
+""" Run this file through the main.py 
+Also, in order to run this we need the 100 dimentions gloVe file which I downloaded from this website: https://nlp.stanford.edu/projects/glove/ , 'glove.6B.zip'
+and attached it to the same folder as this script """
+
 import pandas as pd
 import numpy as np
 import random
