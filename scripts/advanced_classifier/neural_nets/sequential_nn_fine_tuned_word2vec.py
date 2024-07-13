@@ -6,7 +6,7 @@ from tensorflow.keras.layers import Dense
 from advanced_classifier.word_embeddings.custom_word2vec import CustomWord2Vec
 from sklearn.metrics import classification_report
 
-class SequentialNN:
+class SequentialNNWithFineTunedW2Vec:
 
     def __init__(self, data_loader):
         self.df_train = data_loader.df_train

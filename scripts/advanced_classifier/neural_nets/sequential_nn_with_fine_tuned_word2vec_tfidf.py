@@ -9,7 +9,7 @@ from advanced_classifier.tf_idf.tf_idf_embeddings import TFIDFVector
 from gensim.models import Word2Vec
 
 
-class SequentialNNWithWord2VecTFIDF:
+class SequentialNNCustomWord2VecTFIDF:
 
     def __init__(self, data_loader):
         self.df_train = data_loader.df_train

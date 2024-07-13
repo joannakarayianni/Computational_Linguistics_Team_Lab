@@ -1,14 +1,16 @@
 import dataloader.dataloader as dp
 import baseline_classifier.naivebayes.main_nb as nb
 import baseline_classifier.multilabelperceptron.main_mlp as mlp
-import advanced_classifier.neural_nets.sequential_nn as nn1
-import advanced_classifier.neural_nets.sequential_nn_with_tfidf as nn2
+import advanced_classifier.neural_nets.sequential_nn_word2vec as seq_nn1
+import advanced_classifier.neural_nets.sequential_nn_word2vec_dropout as seq_nn2
+import advanced_classifier.neural_nets.sequential_nn_fine_tuned_word2vec as seq_nn3
+import advanced_classifier.neural_nets.sequential_nn_with_fine_tuned_word2vec_tfidf as seq_nn4
+import advanced_classifier.neural_nets.sequential_nn_glove as seq_nn5
 import advanced_classifier.lstm.lstm_glove_simple as lstmglove
 import advanced_classifier.lstm.lstm_tfidf_simple as lstmtfidf
 import advanced_classifier.lstm.bi_lstm as bilstm
 import advanced_classifier.lstm.lstm as lstm
-import advanced_classifier.neural_nets.sequential_nn_word2vec_dropout as nn4
-import advanced_classifier.neural_nets.sequential_nn_glove as nn5
+
 
 if __name__ == "__main__":
     
@@ -35,17 +37,35 @@ if __name__ == "__main__":
 
     # Phase 2 code for advanced classifier.
 
-    print("Running Sequential with word2vec!!!")
+    print("Running Sequential NN with word2vec!!!")
 
-    nn1_instance = nn1.SequentialNN(data_loader)
+    seq_nn1_instance = seq_nn1.SequentialNNWord2Vec(data_loader)
     
-    nn1_instance.train()
+    seq_nn1_instance.train()
 
-    print("Running Sequential with word2vec & TF-IDF!!!")
+    print("Running Sequential NN with word2vec & dropout!!!")
 
-    nn2_instance = nn2.SequentialNNWithWord2VecTFIDF(data_loader)
+    seq_nn2_instance = seq_nn2.SequentialNNWord2VecDropout(data_loader)
+    
+    seq_nn2_instance.train()
 
-    nn2_instance.train()
+    print("Running Sequential NN with fine-tuned word2vec!!!")
+
+    seq_nn3_instance = seq_nn3.SequentialNNWithFineTunedW2Vec(data_loader)
+
+    seq_nn3_instance.train()
+
+    print("Running Sequential NN with fine-tuned word2vec & TF-IDF!!!")
+
+    seq_nn4_instance = seq_nn4.SequentialNNCustomWord2VecTFIDF(data_loader)
+
+    seq_nn4_instance.train()
+
+    print("Sequential NN with glove (6B, 300d)!!!")
+
+    seq_nn5_instance = seq_nn5.SequentialNNGlove(data_loader, 'scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt')
+    
+    seq_nn5_instance.train()
 
 
     print(" ******************** Results for LSTM with word Embeddings ********************")
@@ -64,19 +84,5 @@ if __name__ == "__main__":
     
     print(" ******************** Results for LSTM with GloVE Embeddings ********************")
     nn6_instance = lstmglove.LSTM_GloVe(data_loader)
-    nn6_instance.train() 
-
-
-
-    print("Sequential NN with word2vec and dropout!!!")
-
-    nn3_instance = nn4.SequentialNNWord2VecDropout(data_loader)
-    
-    nn3_instance.train()
-
-    print("Sequential NN with glove (6B, 300d)!!!")
-
-    nn4_instance = nn5.SequentialNNGlove(data_loader, 'scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt')
-    
-    nn4_instance.train()
+    nn6_instance.train()
 
