@@ -2,7 +2,7 @@ import numpy as np
 from gensim.models import Word2Vec
 from nltk.tokenize import word_tokenize
 
-class MyWord2Vec:
+class Word2VecWrapper:
 
     def __init__(self, df_train):
         self.df_train = df_train
@@ -46,8 +46,3 @@ class MyWord2Vec:
                 embedding_matrix[i] = default_embedding
         
         return embedding_matrix
-
-# Example of how to use the CustomWord2Vec class
-# Assuming df_train is your training DataFrame
-# custom_w2v = CustomWord2Vec(df_train)
-# X_train_embeddings = custom_w2v.get_embeddings_matrix()

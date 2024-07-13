@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from advanced_classifier.word_embeddings.word2vec import MyWord2Vec
+from advanced_classifier.word_embeddings.word2vec import Word2VecWrapper
 from sklearn.metrics import classification_report
 
 class SequentialNNWord2Vec:
@@ -20,7 +20,7 @@ class SequentialNNWord2Vec:
         # Fetch word embeddings and labels
 
         # For training dataset
-        embedding_model = MyWord2Vec(self.df_train)
+        embedding_model = Word2VecWrapper(self.df_train)
         X_train_embeddings = embedding_model.get_embeddings_matrix(self.df_train)
         
         # For validation dataset
