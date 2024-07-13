@@ -18,7 +18,7 @@ class CustomWord2Vec:
         # These embeddings are vectors of a given dimension which capture different aspects of the word.
         # Words with similar meanings or contexts will have similar vector representations.
         # The distance between these vectors in the embedding space reflects their similarity.
-        tokenized_data = [word_tokenize(row[1].lower()) for _, row in self.df_train.iterrows()]
+        tokenized_data = [word_tokenize(str(row[1].lower())) for _, row in self.df_train.iterrows()]
 
         # Define Word2Vec model parameters
         vector_size = 100  # Dimensionality of the word vectors
