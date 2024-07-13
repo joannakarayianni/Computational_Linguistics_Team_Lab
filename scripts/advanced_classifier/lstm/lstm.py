@@ -117,7 +117,7 @@ class LongShortTerm:
         y_pred = model.predict(X_test)
         y_pred = (y_pred > 0.5).astype(int)
         predictions_df = pd.DataFrame(y_pred, columns=emotions)
-        predictions_df.to_csv('/Users/ioannakaragianni/Documents/GitHub/Computational_Linguistics_Team_Lab/scripts/advanced_classifier/lstm/predicions.csv', index=False)
+        predictions_df.to_csv('predicions.csv', index=False)
 
         # Print Report
         print("Results for the test set:")
