@@ -1,11 +1,13 @@
 """ Comparing the predictions of the 5 models: LSTM with word embeddings, Bi-LSTM with word embeddigns, LSTM with BERT embeddings,
 LSTM with Tf-Idf embeddings & LSTM with GloVe embeddings, (predictions were on the test data) with the golden standard (test sataset with correct 
 labels on each instance ) 
-The metrics used where F1 micro, F1 macro, Precision micro, recal micro and hamming loss"""
+The metrics used where F1, Precision, Recall, F1 micro, F1 macro, Precision micro, recall micro and hamming loss"""
 import pandas as pd
+from scripts.evaluation.vaulting import Vaulting
 from sklearn.metrics import hamming_loss, f1_score, precision_score, recall_score
 from sklearn.metrics import precision_recall_fscore_support
 import matplotlib.pyplot as plt
+
 
 # Loading prediction files for all the models
 lstm_word_embeddings = pd.read_csv('scripts/advanced_classifier/lstm/predicions.csv')
@@ -26,6 +28,11 @@ models = {
     'LSTM GloVe': lstm_glove
 }
 
+
+# vaulting_instance = Vaulting(ground_truth_test, models)
+# vaulting_instance.findResults("lstm")
+
+#Comment everything below once the above works.
 # Storing performance metrics
 metrics = pd.DataFrame(columns=['Model', 'Emotion', 'Hamming Loss', 'F1 Score', 'Precision', 'Recall', 'F1 Micro', 'F1 Macro', 'Precision Micro', 'Recall Micro'])
 
