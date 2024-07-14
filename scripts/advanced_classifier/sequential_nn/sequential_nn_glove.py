@@ -18,8 +18,8 @@ class SequentialNNGlove:
         self.y_test_labels = data_loader.y_test_labels
         self.embedding_path = embedding_path
         self.emotions = ['joy', 'sadness', 'guilt', 'disgust', 'shame', 'fear', 'anger']
-        self.model = self.build_model()
         self.seeds()
+        self.build_model()
     
     # Setting seeds for securing same results in every run
     @staticmethod
@@ -32,7 +32,6 @@ class SequentialNNGlove:
     def build_model(self):
         self.model = Sequential()
         self.embedding_model = GloVeWrapper(self.embedding_path)
-        return self.model
     
     def train_test(self):
         self.train()

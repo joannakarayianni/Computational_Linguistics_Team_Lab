@@ -3,7 +3,7 @@ import pandas as pd
 from nltk.tokenize import word_tokenize
 from tqdm import tqdm
 
-class CustomGloVe:
+class GloVeWrapper:
 
     def __init__(self, embedding_path):
         self.embeddings_index = self.__load_glove_embeddings__(embedding_path)

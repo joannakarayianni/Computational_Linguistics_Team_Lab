@@ -21,6 +21,7 @@ class SequentialNNWithFineTunedW2Vec:
         # Fetch word embeddings and labels
 
         # For training dataset
+        # This step creates the fine-tuned word2vec model - emotion_word2vec.model
         embedding_model = CustomWord2Vec(self.df_train)
         X_train_embeddings = embedding_model.get_embeddings_matrix(self.df_train)
         
