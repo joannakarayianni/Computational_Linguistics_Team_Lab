@@ -43,11 +43,11 @@ if __name__ == "__main__":
     
     seq_nn1_instance.train()
 
-    print("Running Sequential NN with word2vec & dropout!!!")
+    print("Running Sequential NN with fine-tuned word2vec & dropout!!!")
 
     seq_nn2_instance = seq_nn2.SequentialNNWord2VecDropout(data_loader)
     
-    seq_nn2_instance.train()
+    seq_nn2_instance.train_test()
 
     print("Running Sequential NN with fine-tuned word2vec!!!")
 
@@ -59,13 +59,13 @@ if __name__ == "__main__":
 
     seq_nn4_instance = seq_nn4.SequentialNNCustomWord2VecTFIDF(data_loader)
 
-    seq_nn4_instance.train()
+    seq_nn4_instance.train_test()
 
     print("Sequential NN with glove (6B, 300d)!!!")
 
     seq_nn5_instance = seq_nn5.SequentialNNGlove(data_loader, 'scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt')
     
-    seq_nn5_instance.train()
+    seq_nn5_instance.train_test()
 
 
     print(" ******************** Results for LSTM with word Embeddings ********************")
