@@ -124,7 +124,7 @@ class LSTM_GloVe:
         y_pred = self.model.predict(self.X_test)
         y_pred = (y_pred > 0.5).astype(int)
         predictions_df = pd.DataFrame(y_pred, columns= self.emotions)
-        predictions_df.to_csv('/Users/ioannakaragianni/Documents/GitHub/Computational_Linguistics_Team_Lab/scripts/advanced_classifier/lstm/predictionsglove.csv', index=False)
+        predictions_df.to_csv('scripts/advanced_classifier/lstm/predictions/predictionsglove.csv', index=False)
 
         # Print report
         print("Results for the test set:")

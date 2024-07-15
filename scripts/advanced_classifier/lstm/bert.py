@@ -125,7 +125,7 @@ class BertModel:
         y_pred = self.model.predict([self.X_test, self.attention_masks_test])
         y_pred = (y_pred > 0.5).astype(int)
         predictions_df = pd.DataFrame(y_pred, columns=self.emotions)
-        predictions_df.to_csv('/Users/ioannakaragianni/Documents/GitHub/Computational_Linguistics_Team_Lab/scripts/advanced_classifier/lstm/predictionsbert.csv', index=False)
+        predictions_df.to_csv('scripts/advanced_classifier/lstm/predictions/predictionsbert.csv', index=False)
         # print report
         print("Results on the test set:")
         print(classification_report(self.y_test, y_pred, target_names=self.emotions))
