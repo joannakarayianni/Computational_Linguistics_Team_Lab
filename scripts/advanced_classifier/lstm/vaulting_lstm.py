@@ -1,4 +1,4 @@
-""" Comparing the predictions of the 5 models: LSTM with word embeddings, Bi-LSTM with word embeddigns, LSTM with BERT embeddings,
+""" Comparing the predictions of the 5 models: LSTM with word embeddings, Bi-LSTM with word embeddigns, BERT,
 LSTM with Tf-Idf embeddings & LSTM with GloVe embeddings, (predictions were on the test data) with the golden standard (test sataset with correct 
 labels on each instance ) 
 The metrics used where F1, Precision, Recall, F1 micro, F1 macro, Precision micro, recall micro and hamming loss
