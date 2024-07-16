@@ -1,0 +1,513 @@
+Index	Actual	Predicted	Text
+1	guilt	shame	When one of my parents insinuates something about the other (they are divorced).
+7	guilt	shame	When my mother found me in her bedroom "stealing" sugar in her bedroom.  According to our customs there comes a stage when a child stops using the parents bedroom and I was well past that age.
+17	anger	shame	A girl entered in the division where I work and greeted everybody but not me.
+19	anger	guilt	When my brothers were being cruel to my boyfriend, because his flat-mate bent back one of my brother's fingers. It wasn't his fault.
+20	guilt	disgust	Carried out a vandalistic act on some windows at an old army location.
+21	disgust	shame	At a party I met a girl who drew me to her, told me some nonsense and always wanted to kiss me.
+23	guilt	shame	I refused to lend my homework to a friend.
+26	sadness	fear	My sister won a scholarship to Norway and it was particularly as she walked across the tarmac to get on the plane and she looked back at us.
+28	guilt	fear	When I took a car which was not mine, and suddenly it stopped working.
+31	anger	joy	Saw in the TV South Korea cheating in the Asian Olympic games.
+33	guilt	sadness	A few weeks ago I thought about an exam I had to take soon. I remembered this just before I had to go to sleep. I felt guilt because at the beginning of the year I planned to succeed.
+34	sadness	guilt	Enrolling at varsity, being told I couldn't get in to certain papers.
+38	shame	joy	When I had not done well in Geography at my MCE I was expected to get more than I did.
+41	fear	anger	My mother had fallen down from a ladder when she had been gathering cherries. Her back was hurt. Just when I arrived, I saw people of the life-saving service giving her medical care.
+42	shame	guilt	A young visitor to the house stole money from an elderly visitor's purse. It wasn't noticed for some hours.
+43	sadness	disgust	I saw a lot of starving people in a T.V news report.
+44	shame	anger	When I found out my roommate had been talking behind my back about very personal things.
+46	sadness	fear	When my dog was stolen.
+49	guilt	fear	I ran over my dog with a bicycle when I was carrying him tied to the handle bar.
+51	shame	guilt	When I lied to my girlfriend, telling her that I had passed an exam, when I actually did not even take it.
+52	fear	shame	I was about to begin a journey in a car with an acquaintance of mine.
+55	anger	shame	I felt much anger when my fahter interferred in my relations with another person whom I liked very much, ending something that I adored.
+57	guilt	anger	While quarreling with my brother I broke the glass door of the cupboard and a china doll.  We were scolded by my father for breaking the door but we did not tell him about the door.
+58	sadness	guilt	[ When I feel that I have made a mistake.]
+63	shame	fear	A day when I was getting out of the shower I covered only the front part of my body with a towel (I was 7 years old), and I didn't see that my cousin was in the room.
+67	joy	sadness	When my sister's first child came home, after one week in intensive care at the hospital.
+68	anger	fear	This summer I got into a fight with one of our patrons (at a theatre). He hit me and I hit him and her friend, he hit my friend and we all hit eachother.
+69	fear	disgust	When I saw a horrible movie - Alien.
+71	shame	anger	I talked with a man who stammered and without controlling myself, I started to talk imitating him.
+73	joy	shame	After the term exams I happened to meet a person that I respect and of whom I think very highly. It was nice that although we see each other rarely he had not forgotten me.
+76	joy	sadness	My parents and brother came up over the weekend. We are a very close family. This was my first year away from home. They brought one jacko-lantern with a new design. That is the old joke that we have a great new design - it's always the same.
+79	shame	fear	I was jerking me off in my bedroom, when suddenly, my mother came in. She looked at me and immediately left the room.
+80	guilt	joy	I had spent the weekend visiting relatives and friends and didn't study for Anatomy class on Monday.
+85	sadness	guilt	When I found out that my girlfriend would not be coming back to UCB for one semester, but would be living in San Jose.
+87	sadness	guilt	My grandmother died, and my mother called me one sunday morning in the Autumn.  The way my mother told me about it, I hated her at that moment.  She sounded as if she had been waiting for the death of my grandmother.  I had lost a person close to me.  I felt guilty too as I had been bad to my grandmother of late.  I had not remained calm when she no longer understood everything so well.
+88	sadness	anger	The quarrel between my  parents.
+89	fear	shame	Finding out that I made a stupid mistake in the examn.
+96	disgust	fear	I felt disgust when I received visitors at an odd hour. I was seriously preparing for Examinations, so I did not appreciate their coming.
+98	shame	sadness	At the funeral of my uncle, I was one of the bearers.  I was not familiar with the etiquette and acted tactlessly because of my ignorance.
+100	fear	sadness	When I was the first to arrive at the scene after an accident, and found that a close school friend had been killed.
+101	anger	guilt	During the Christmas holdidays I wanted to invite my brother, his girlfriend and their child for dinner. When I said to my brother's girlfriend that I would like them to come at my place for dinner, she refused and never mentioned it again as if I had never asked her.
+104	sadness	disgust	When my father a 4th/5th generation colonial (from Eng.) attacked me verbally about my chosen partner. A man whom he discarded because his colour skin was not white. His ultimate disgust saddned me.
+109	joy	sadness	Hearing my girlfriend accept my offer of marriage.
+110	guilt	shame	When I shoplifted a pair of earrings from Coles and my Mum caught me with them in my bag.
+111	sadness	guilt	After blowing up and saying all the wrong things, I realized what I had done and hurt that person and myself.
+112	disgust	joy	I heard somebody talk about studies in a highly enthusiastic "student-like" way.
+114	sadness	fear	When the gear broke on my car.
+115	disgust	shame	I received a letter which was too strong for me. It said I had done something which I really didn't do.
+121	disgust	sadness	When I heard that my sister had shouted at my friend's cousin at their place.
+123	joy	sadness	The day some friends of mine and I decided to go to Galicia on holiday.
+125	anger	shame	That was what I felt with a teacher who put down quite unreal marks.
+131	anger	shame	Being sexually assulted on a bus and noone helped (people only laughed).
+134	shame	guilt	I was eating in a very nice restaurant, when the servant asked whether I liked the food I told him that I liked it but that there was one thing which wasn't so good. The servant than worked very hard to make it good.
+135	guilt	anger	When my boyfriend asked me to go out with him and I refused because I wanted to go out with another guy.  I did go out and my boyfriend found out.
+140	joy	guilt	When I succeed in writing something I felt and doing it I felt well and very happy for being able to express to myself something that was suffocating me.
+143	guilt	disgust	Fight with my mate after a quarrel.
+144	disgust	shame	I had to change a baby's clothes for the first time.
+145	disgust	anger	At a discussion a friend took a "faschistic view", what I had not expected.
+146	anger	shame	Being insulted in front of my parents, and they believed other people (those insulting me).
+148	disgust	fear	When in my childhood we were forced to take cod-liver oil.
+155	anger	guilt	When my mother rejected my boyfriend and made unfair judgements on him.
+156	shame	joy	I flet shameful when I learnt that I cooked Nsima which was full of lamps in it.
+157	anger	guilt	I went singing with a group of young people on January 6th (The three Magi), a local custom called "star singing". One of the girls, my girlfriend, broke the star. Being the accompanying person, I felt very angry thinking of the consequences.
+159	anger	guilt	I feel this feeling when I am to fill in a questionnaire or a form.
+162	sadness	fear	A and I were walking along the new Asia stairway to the Chung Chi college for our lecture and I saw him with her.  He put one arm around her shoulder and laugher brightly and joyfully.  I did not dare and did not want to look, just walked by them quickly.  The interest of talking to A disappeared and I just wanted to remain silent.  But I did not want A to know and so I left him and went to F.  I should have expected this to happen.
+164	guilt	shame	In an exam when I answered the questions with very little assurance due to insufficiet preparation.
+165	shame	guilt	In the past I experienced this feeling almost all the time - wherever I went, in different sutuations. I was small and I had to be taken to kindergarten, but me the fool didn't dare to tell exactly where, finally as a result I was late.
+170	guilt	anger	Yelled at my parents for not buying me a car like other parents.
+175	anger	guilt	Last week, my organization summoned an executive meeting and one of the executive member's pointed out a loop hole in the committee's administration.  He could not suggest any improvements, so I quarrelled with him.
+178	shame	disgust	When my father found me in bed with a girl, we were deep in actioon when he entered the room.
+179	disgust	anger	Someone had stolen an article from a library journal.
+181	guilt	disgust	Not attending school, when  am not sick - but in need of mental rest. Staff on your return query your "sickness" - it is easier in N.Z. to be sick, rather than confide other personal reasons etc.
+184	joy	sadness	Some time ago a close relative of mine got off cheap with the worst.
+185	sadness	shame	When I felt powerless to help the poor or when I don't know how to.
+186	sadness	joy	When I didn't succeed to enter at the University, I felt that the college entrance course sistem prejudiced me, that my integrity, and effort weren't corresponded.
+188	anger	fear	As a child - about 8 years old - walking across a paddock - being set upon by another boy who claimed it was "his land" - being intimidated by the boy - crying, being punched, etc.
+192	anger	guilt	A close person lied to me.
+193	anger	guilt	When my brother-in-law's brother stole my clothes when my brother-in-law and I had gone to cut wood for the fire.
+196	shame	anger	My P.T. instructor also works as a masseur. He wanted to massage me, therefore I had to undress. For the first few times this was not easy for me; I got gradually used to it.
+198	disgust	shame	[ No response.]
+199	guilt	anger	When I fought with my sister and said that she had provoked this. She was very seriously scolded.
+204	anger	disgust	Saw some young people fighting for seats on a bus.
+207	fear	disgust	Last Summer in Italy I was attacked by a dog.It was terrible to feel that untidy dirty dog against my naked skin.
+208	anger	guilt	A close friend first said he accepted an agreement, but later used that agreement as a reason for attacking me.
+209	fear	guilt	When I impregnated a certain girl, I thought that I would be forced to marry her or go to court.
+210	shame	sadness	Being with a close friend, in the city, who was involved at the present point in time in outrageous activity.
+212	joy	anger	Bulgaria won a football match against France.
+214	shame	anger	My teacher said that being university studets we did not have any self-initiative or self-control.
+215	joy	sadness	Our only elder sister got married and started having pains in her abdomen and she was told that she could not have children. To our suprise she had a baby 2 months back.
+216	anger	disgust	A man treated his dog very badly - he insulted and beated him until the dog kept lying on the floor with his tail drawn in.
+217	fear	anger	When one meets new people with whom one is forced to collaborate with.
+218	sadness	joy	Finding out that the university will give first priority to qualified practioners and clinical years to go to your English lectures.
+219	fear	sadness	When I found out that my father had lung cancer and they did not know how long he would live.
+221	anger	guilt	This also happened when I was very small.  I was beaten up by my  mother for no fault of mine, I had just beaten up my younger brother for what I thought was his fault.  I was very angry with my mother.
+223	anger	fear	When I was a soldier I quarrelled with my commander and may be in revenge for this he detailed me on duty two successive nights. Naturally he checked me up on the second night and found me asleep for which he sent me to the cells.
+224	guilt	fear	When I was starting in romance with my husband, we went out to curt, and we stayed in the car "making love". At the time I was seventeen and I was very immature until a day I lost my virginity.
+228	shame	joy	The last time I had to phone the Registry, after having called them so many times in the last few days.
+230	shame	guilt	At a meeting with over one hundred people, they decided who had to speak from the stand by drawing lots.
+231	anger	sadness	I loved a person and he went away. It wasn't necessary that he left me to reach his goals.
+234	shame	joy	When I failed the grade 7.
+237	shame	joy	A friend giving me an expensive Christmas gift while I gave her a cheap one.
+243	fear	disgust	I was at the cinema with my sister and her boyfriend.  A man sitting beside me started to stroke my leg for a while, he left in the middle of the film.
+244	shame	disgust	I was misbehaving in the agency.
+246	anger	shame	I once caught a letter in my girlfriend's handbag from a certain man. I felt anger.
+247	anger	disgust	When my father addressed me directly and maliciously, thus including me in the "family war".
+249	guilt	anger	While playing a ball game, I made a mistake and we lost the game.
+250	shame	sadness	My friend had many female friends and I thought that they were his lovers.  I would scold him but he did not accept my advice.  Later I learnt from his girlfriends that this was not true.  I felt ashamed at having misunderstood him.
+251	shame	joy	When I had not been accepted to a college which I dreamed of going to. I felt that I had let myself and my parents down.
+254	sadness	fear	When I felt alone and without love.
+255	disgust	fear	Obscene phone calls.
+258	fear	disgust	When I was walking down the street, some boys showed me a knife and stole all my money.
+259	guilt	joy	When I got fired from a job because I gave a discount to a friend.
+260	shame	anger	We were at a football match and when we were leaving the stadium (the stadium was packed with people) and I lost my shoe in the crowd. Our attempts to find it didn't give any result and I had to go home without one shoe. In other words to cross the whole town !
+267	shame	disgust	Emptied a bucket of water in a hospital.
+272	shame	joy	When an intimate friend of mine passed B.A with first class and I got only pass class.
+278	fear	guilt	When I was feeding a premature baby (7 months), the baby chocked. This was when I was working in children's ward I thought I had killed the baby.
+279	guilt	shame	The same as in "shame".
+280	fear	sadness	Thinking of the unknown, what happens at the moment of death, etc.
+282	sadness	anger	When out of work.
+283	guilt	shame	At a party, I started talking to a guy I had seen in one of my classes. My boyfriend felt awkward and left to talk to a friend but kept on looking at me as I talked.
+285	anger	disgust	When an acquaintance of mine beat up another person for no just reason, and thus showed off his power.
+286	sadness	disgust	Watching "11 am". They had a programme on the starving refugees. Their plight was a source of sadness for me.
+288	anger	guilt	When I got the feeling that I had to do all the housekeeping while my boyfriend didn't do anything. This happened in a period of exams when I had to study very hard.
+290	shame	disgust	On a social occasion, I noticed that I reacted on the basis of my autonomous nerve system (I could not help it).
+291	guilt	fear	One of my pupils escaped from school to the street.
+293	disgust	guilt	At hostel, my roommate was a very selfish person and would avoid doing anyhting that did not concern him.  A few of us prepared lunch together and had decided to share the work.  My roomate had promised to do the same but I had to wash the bowls everytime after dinner.  I tried to wait and thought that he would realize his fault.  I did not want to tell him to do the work as he is a university student and ought to have self-respect.  He disappointed me and so every time I saw him I tried to avoid him and did not want to keep any contact with him.
+294	guilt	anger	Having been angry and unpleasant towards my parents.
+295	anger	shame	My mother read a letter that a friend of mine had written to me telling me how she had got drunk the last time.
+296	anger	guilt	Teenage neighbours smashed my letterbox for the fifth time in a couple of months. It was a deliberate action of kids who had stayed in my home, had meals there yet took a dislike to my daughter. 
+297	shame	guilt	When I accused unjustly a person of robbery, who proved me the contrary, almost caused a public fight.
+298	disgust	sadness	A friend of mine goes out with this guy. She sleeps with him but is quite happy for him to play around - as well as herself.
+302	joy	sadness	I was going to my village, after having been rather oppressed in Madrid. 
+304	fear	guilt	When the relationship with my first girlfriend broke up and I realized it too late.
+305	anger	shame	When I am discussing something with a person and I realize that the other person is thinking over her own argumentations instead of listening, I become angry.
+307	anger	disgust	When my flatmate put me down because she "thought" she was better than me, or she felt she was.
+309	guilt	anger	My son drank four pills of diazepam every two hours instead of amidophen.
+314	shame	guilt	When I went out with a friend of mine to meet her ex-boyfriend who didn't know that she was engaged to be married.
+316	shame	disgust	[ ....has not really happened.]
+318	guilt	sadness	A great friend of mine travelled with the intention to change his life. He didn't succeed and returned depressed. I had not power to support his frustration and his behavioral change.
+321	shame	guilt	When I was doing my homework at home, some relatives came and advised me to help my mother do the house-work.
+322	disgust	shame	A pig in the well from which we drink.
+324	disgust	joy	After joining my M.A in Social Sciences, I appeared for the first semester exam.  I failed one of the exams, and when I looked at my results I felt disgusted and then I got angry.
+325	disgust	guilt	A wurm dropped on my head.
+330	disgust	anger	One of my flatmates and I came back to the flat Monday morning, to find a real Mess, left by the guy we share with.
+334	joy	anger	When I won some coins in a small competion.
+337	fear	guilt	Fear - paralysing - that I would not be accepted by the God who I believed to be there because I was "morally bankrupt" (before becoming a Christian and realising that that was why Christ came to free us from sin and to forgive us).
+338	sadness	anger	My brother is a soldier. He promised to come home in a furlough but in the last moment he phoned and said that he could not come.
+340	fear	guilt	I had to go to the dentist's. When he touched my tooth with his drill, I was terribly aftaid of the pain I would feel any moment.
+341	disgust	joy	Finding out that some students are getting good reports they do not deserve.
+342	anger	guilt	I felt angry when my mother-in-law did not handle my daughter properly and she fell down from the bed and hurt her head.
+343	disgust	sadness	When I heard about a murder of a 16-year-old girl.
+344	anger	guilt	I was very angry when one day I went to see my girlfriend I talked to her and could not answer back. She was depressed for reasons which were not known to me.
+346	guilt	anger	A lonely, neurotic, shy girl lives nearby. She has expressed a wish to meet me, I have however avoided her (turned down an invitation) as the crisis my partner is going through uses up all my empathy.
+347	disgust	joy	Getting back my math midterm, I received a lower grade than I thought I would get. After going through the questions I felt that the grader had graded harshly and I had made only a few ? errors.
+348	shame	joy	Getting a low grade on a midterm.
+349	sadness	joy	From the fact that my husband and I are not in good terms.
+352	disgust	fear	There was a cat on the street.  It had been run over and its head was open.  We passed beside it.
+353	fear	anger	Waiting for my girlfriend to come from her apt. to mine. She was very late and I thought something awful had happened.
+354	shame	guilt	[ I have never felt this emotion.]
+355	sadness	shame	Iqam chosen for your lecture and my best friend is not. Now he is angry with me and I cannot help him.
+356	sadness	fear	When I heard the news of the death of my father.  It was in the evening and I was alone all night in my room trying to remember the face of my father.
+357	guilt	sadness	My wrong behaviour made my loved one feel sad and uneasy.
+358	sadness	joy	Love problems.
+359	guilt	anger	I arrived an hour late for an important meeting ( I had misunderstood the time).
+361	fear	joy	First day back on the job.
+362	guilt	anger	Did not get up early enough to watch my class football team playing against another team.
+363	anger	disgust	With the girl whom I may be loved truly. When she refused to come with me to an occasion (she was from another town).
+365	shame	anger	Arguing about price with private shop-assistant.
+367	guilt	shame	When I was taking the 11th standard exam, my friend who was sitting behind me asked me for some answers.  The teacher looked at us just then and scolded both of us.  Everyone started looking at us and I felt very guilty.
+368	anger	joy	Your prejudice against psychology students and education students (not allowing us to go to the medical university lectures).
+370	sadness	guilt	A friend of mine was hurt as he thought that our relationship was not the same as before and something had gone wrong.
+372	shame	joy	When I made a fool at an examination.
+373	anger	guilt	I had gone home for a week-end and when I came back I found that my clothes and my bedding had been stolen.
+376	fear	shame	On May 20th I got a summon to appear in court on May 28th 1985 on the subject of impregnanting a school girl. I really feared of standing in the court in a few days time after this notice. I was also embarassed due to formal approach that was expected of me to the Principal.
+377	sadness	guilt	I wanted something in particular and did not get it, also there was no possibility of getting it.
+378	shame	guilt	Not finishing homework.
+382	guilt	sadness	When I was very young, one day, I kicked my grandmother and caused her an injury which took a long time to heal.
+384	joy	guilt	My cousin asked me to be a bridesmaid for her. This made really happy because I was adopted into the family and her asking me made me realise that she saw me as a cousin and not just another person. There were other cousins she could have asked but she asked me.
+385	anger	guilt	About the car (sadness) I felt anger the way I acted after negotiating it.
+387	disgust	anger	Discovering a good friend had lied to me, resulting in a detrimental relationship with another person.
+388	sadness	guilt	We went to visit my mother at the residence.  She was crying and said that she was about to die.  I believed all her complaints and continously thought of the possibility of loosing her.
+389	sadness	joy	I never failed my examinations since Standard 1 but I experienced sad moments when I sat for Standard 8 Examination and I was not selected for Secondary School education in 1978.
+390	joy	shame	When I met my boyfriend and we discovered that we shared the same ideals and goals in life, and that we could share all our feelings and thoughts and felt that the world's not so bad when you have someone really close to share your life with.
+391	anger	guilt	Someone stole my ski at Vitosha and of course I was the one to be blamed. I left them without supervision.
+392	shame	guilt	When I was a child: I had told my mother a lie and she found it out.
+393	fear	guilt	I felt the above condition when I took my brother's bicycle to a market and unfortunately the bicycle was stolen and I didn't know how I could tell the owner about the stolen bicycle.
+395	disgust	fear	When I saw a picture, in the Gothenburg Post, of a totally demolished car with two fatally injured passengers.  The car was so badly damaged that they couldn't get the bodies out at the scene of the accident.
+398	guilt	fear	When I and the boy next door set fire to a house by accident.
+399	anger	joy	When my boyfriend told me that it would be difficult for him to marry me.
+401	sadness	shame	When I came to know that my feelings for someone were not reciprocated.
+404	shame	joy	I got pass marks in the H.S.S compulsory courses while most people performed well.
+408	disgust	sadness	Hearing Norman Jones get hysterical in Parliament about law reform (on the radio - listening with 2 others).
+409	anger	guilt	My friend and I were to attend a very important meeting and he had promised to come and pick me up.  But he did not turn up and I felt very angry at him.
+410	shame	sadness	I passed on some gossip that was untrue and cause two friends to have a fight who were already experiencing difficulties with each other.
+412	fear	disgust	When I was first taken to the dissection room where I found 10 dead human bodies.
+413	sadness	shame	[ No response.]
+415	fear	guilt	I'm afraid of not being able to go to the school I want because of suffering grades.
+416	shame	fear	During carnaval I danced for a few minutes normally I don't dance because I am rigid in my moving around during a dance, I stopped very soon.
+417	guilt	anger	When I was scolded by my dad for bad behaviour.
+418	anger	guilt	I had stolen a bottle of rum from a person who knows me well. He threatened to call the police if I did not pay 500 Shillings.
+419	disgust	shame	About my girlfriend's sister who is a viper as I discovered some time ago.
+421	disgust	guilt	My father promised to send me pocket money at the month-end since I wanted to buy a new pair of shoes when I was at secondary school, but he didn't.
+425	fear	disgust	Speaking in front of a large group of people.
+427	shame	guilt	When I promise to do something but I don't fulfill it.
+431	shame	anger	When I complained to my mother about how untidy the kitchen loooked, she boxed my ears ( this had never happened before).
+433	guilt	sadness	Finding out that I have misunderstood other people.
+435	disgust	shame	When I was teaching a student started making silly remarks in class.
+436	disgust	joy	When I saw a lady putting on a pair of trousers, I felt it was a disguise according to Malawi culture.
+437	anger	disgust	Friend (male) hinted that my talking to other men at a pub was immoral. He implied that I should remain only with my boyfriend the entire evening.
+438	disgust	anger	Someone acting stupid in public.
+442	sadness	guilt	I wanted to be pregnant and did not succeed, so I was depressed    at every menstruation.
+446	disgust	shame	Being looked at by someone I do not like.
+447	anger	disgust	It happened in a tram: some older people started to grumble about the young people just because I had not immediately left my seat to them.
+448	anger	shame	When a friend who comes visiting me unexpectedly asks for coffee and I refuse to give him this.
+449	disgust	guilt	I was hitch-hiking when a man stopped and gave me a lift to Nijmegen. During the ride he asked me whether I was in for fun. The man was fat and tatooed.
+450	anger	disgust	[ When bad and disgusting language is uttered by people, or when someone tries to show what is beyond his own capacities.]
+451	disgust	shame	When my oldest sister discovered that her boyfriend had another girl.
+453	anger	disgust	Made a statement that other people did not believe.
+455	fear	joy	Before my final examination.
+456	fear	sadness	When I learnt that the girl I had impregnated was in hospital and was on the verge of dying as she had refused to accept the responsibility of her pregnancy and had wanted to commit suicide.
+457	sadness	guilt	When my mother scolded me for something, very insignificant, without knowing the real cause of what had happened. 
+458	disgust	joy	When I got  grade "C" in M160 at the end of my first year at UNZA.  I had expected a "C+" or a "B" as M160 is easy, going by my capacity in mathematics.
+459	fear	sadness	I lived in a flat with a couple. The woman was so jealous of me, that she sometimes had crying fits. Eventually her husband could not stand that any more and wanted to kill me.
+460	shame	disgust	While attending some affairs, which were taking some time, with a bank officer, I felt that my clothes and appearance were out of place, too raggy.
+468	fear	joy	Before an exam which I, finally did not take.
+472	disgust	anger	I was disgusted at myself when I dropped a vital catch, while playing a cricket match, and we lost the match; though the catch was difficult. 
+475	sadness	shame	When I failed the grade seven examination.
+479	disgust	anger	The way my husband and his family treated me - unfairly, cruelly, and unjustly.
+480	sadness	anger	Being bored in school, not being able to marry and have children.
+483	joy	sadness	Finding out my name on the list for English lectures.
+485	disgust	guilt	When I knew that a person who I didn't like, had about me other feelings.
+492	anger	disgust	After seeing an "uncertain" child work on a model for several hours, I watched a "bully" of the same age destroy it, telling the child that it was worthless.
+494	shame	guilt	My guilty behaviour was found out by others.
+497	fear	sadness	When in a car accident where car was total wipe off (wipe out, or write off).
+498	anger	guilt	It was during the beginning of the term. I had K100 and kept it in my handbag. I left the handbag in the wardrobe but didn't lock it. Next time I found that K30 were stolen.
+499	shame	disgust	Saw something stupid and ignorant happening in the countryside.
+500	sadness	disgust	Talking to a pensioned and bitter "street order" policeman.
+502	fear	joy	I am a kindergarten teacher and I am thoroughly weary of my job.  After having taken the university entrance exam I suffered from anxiety for weeks as I did not want to carry on with my work - studies were the only alternative. 
+504	anger	guilt	When somebody stole my brother's disco machine.
+505	anger	fear	Having a fight with a class mate.
+506	joy	anger	Being together with my best friend.
+510	anger	shame	Someone spread rumours about me.
+512	shame	fear	Fighting with my father while drunk.
+513	anger	fear	I experience that feeling when I am unsulted without deserving it or when someone deceives me.
+514	anger	disgust	[ For example, unfair pushing in a bus.]
+515	joy	shame	When my father bought me a suit.
+518	guilt	sadness	When I realized that I had three more examinations to take.
+519	joy	guilt	Went to a movie with a date, walked on the beach (in Alameda) spent some time afterwards in her apt.
+521	shame	sadness	After lot of explanation, to fail in my work.
+522	guilt	anger	I had a quarrel with my father. He was depressed, because somebody had treated him injustly. As we had an argument, it was impossible for me to help him.
+528	disgust	anger	I had a friend who was very kind to me.  I tried my best to like him and understand him but when I was with him I could not help rejecting, criticizing and blaming him.  I wanted to get away from him as soon as possible.
+529	joy	anger	While having a discussion with a colleague of mine, I realized that her conception of man and work were similar to mine.
+530	sadness	guilt	Tonight in bed when I realised how bad my relationship with my friend was.
+532	shame	disgust	A girl I was with yelled something out to this group of guys I knew. It sounded really childish.
+533	fear	shame	I came home and discovered that someone had broken in. Then I realized that they probably were still there.
+534	sadness	guilt	I feel sad when I see things done against men and nothing could stop it - at least I think so.
+535	shame	anger	After having quarelled unnecessarily and without any reason, and having been stupidly cross in every way.
+539	fear	guilt	When my brother was very late in arriving home from work.
+540	disgust	shame	[ Do not remember any incident.]
+543	fear	anger	I work at a day care centre, and one day when the children were outdoors a four-year old boy disappeared from the yard.  I was not looking after them then, but as the manager it was me who was responsible.
+545	joy	guilt	Easter holiday - I had been working weekends and had just left.
+549	guilt	anger	When I had to lie to my boyfriend so that he wouldn't suspect I'd bought him a xmas present as expensive as I had.
+550	joy	anger	It was Saturday, my duties were over for a few hours and I could at last be with the people I wanted to see.
+554	sadness	joy	After an exam which I failed.
+555	guilt	shame	I was sitting in a restaurant with friends and I knew that in the meantime my girl-friend must have come to my flat and found the door closed.
+557	shame	joy	Every time I do not write something well in English.
+558	shame	joy	When I failed the ninth standard exam in school.
+561	anger	disgust	When I was the target of a great many insults and completely unfair accusations of a large group of people.
+562	guilt	sadness	After a courtship of three months I made an end to it. The boy was very sad about this.
+564	disgust	anger	During these Summer vacations a schoolmate who was not in my class went to Britain.  Before he left, his classmates and some of us who were accquainted with him had a B.B.Q on the beach.  When I arrived I saw that some people , who were not close friends of the departing person(person A), were playing mahjong.  Some others were playing bridge and A had nothing to do, besides it was A who had prepared the food.  Later when we wanted to talk and his classmates did not even have the decency to listen to him.  They only asked him a few questions half-heartedly and then they talked on their own.  Some of their conversation was against me and  another classmate.
+565	guilt	anger	My roommate got married and invited me to share a flat with them. But with a young couple there should not be a third person. I am to blame for not following the advise of the others, but it is not late still.
+566	shame	fear	Hit a dog with my car, and didn't stop.
+568	shame	anger	When I was dismissed from a job after having been accused of theft.
+574	anger	fear	I caught a "peeping tom" at my window when I was getting undressed.
+576	fear	guilt	I helped someone to do something and was found out.
+577	anger	shame	I felt anger of a friend when she met "a date" and become nervous and pest as she always gets when she meets him.
+578	shame	guilt	I did bad on a test I didn't study for.
+583	disgust	guilt	When I beat up my brother in order to control him and make him obey my parents orders.
+587	anger	sadness	My girl-friend did not understand me; I was angry with myself because I had problems when we seperated - I could not resign myself to it.
+588	sadness	anger	A certain person whom I respect and esteem a lot pays me no attention.  She keeps up appearances but shows almost no interest in me.
+593	anger	disgust	When I discovered that the people I trusted most were talking behind my back.
+594	shame	guilt	Not finishing my duty as a class leader.
+596	guilt	anger	When I robbed a loop in supermarket.
+604	disgust	fear	Coming home one night - my sister was home, and had been drinking heavily and started picking arguments.
+605	guilt	anger	My friend came to the concert for my sake as it was me who had organized it and the concert was unsuccessful.
+607	shame	joy	My love proposal was turned down by a lady I really loved.
+610	joy	sadness	The time I first saw my cousin who is living in Tanzania.
+612	sadness	shame	When I feel I must be with somebody, to talk with somebody - but I am alone.
+613	shame	disgust	The morning after a wild party.
+614	guilt	joy	When I scored the third goal to my own side at a football match against William Murray Secondary School and we were badly defeated.
+620	fear	shame	I got caught shoplifting a package of gummy bears.
+626	sadness	joy	A girl I love does not love me.
+627	joy	sadness	When my term paper was evaluated.
+629	fear	joy	My sister had to undergo a very complicated operation, her eyesight was at stake.
+635	sadness	guilt	When the neighbour of a friend of mine was stabbed to death by thieves in Kabwe.  They stole his van.
+636	guilt	anger	A friend of mine trusted me to back her in a decision she had made.  But when the moment came I did not agree with her opinion.
+641	fear	joy	After I had managed to fail my first year at University I was scared as to what I was going to do with my future. I didn't want a mundane 9-5 job and yet I didn't know if I could pay my way through an unsubsidized year at university to settle down and continue my studies.
+642	joy	sadness	A close acquaintace cried for me. I felt happy because somebody cared.
+643	shame	guilt	I scolded my sister without waiting for her explanation.
+646	joy	disgust	I noticed that Meryl Streep and I had similar cheekbones and jaw structure.
+647	anger	shame	South Korea cheating for gold medals.
+655	sadness	shame	Not doing well in an examn.
+657	disgust	shame	When I was studying in the library a pair of lovers were sitting next to me talking in an intense and soft voice.  They were disturbing others.
+660	disgust	anger	A situation of overt unfairness, manipulation of people and its consequences.
+661	fear	joy	When I took the first year university exams and made a lot of mistakes in the P110 exam.  I was afraid of failing and thus being unable to go to the school of medicine.
+664	sadness	fear	[ When after a night of sleeping in another's arms, one wakes alone and knows that the lonely arms of the night are not the same that one meets in the morning.]
+665	anger	sadness	I was living in a flat where things did not go very well for me.  Finally, they threw me out and this prejudiced people I esteem a lot.
+676	shame	anger	Insulted my girlfriend during a peptalk.
+677	anger	shame	New Year's Eve party in the country, I hardly knew a person; my partner spent most of the time at the bar. I had little opportunity to get to know people because our table was separated and my boyfriend's parents were present.
+684	fear	joy	While drinking a soft drink, I had the impression of swallowing   a piece of glass so I went to the district hospital and got admitted there.
+685	shame	joy	I had always been first in my class and in the preliminary board exams I scored the highest marks.  Then the exams were postponed and I neglected my studies as I was confident.  However when the final results came out I felt ashamed as I had scored less than 60% marks and my rank in the class was fifth or sixth.
+686	shame	disgust	Can't remember that feeling.
+687	anger	disgust	I had a very heavy work load and two colleagues, whom I have nothing against, disturbed me by "terror ringing", i.e continously interrupting me by telephoning.
+688	anger	sadness	My grandfather's funeral.
+691	shame	anger	When my friend let my personal matters be publicaly known.
+693	anger	disgust	I was asked to stop studying economics, a field which interested me, by my employers.
+694	guilt	anger	I encouraged my brother to play football and he was hurt while playing the game.
+696	shame	guilt	When I forgot my mother's birthday.
+698	shame	anger	When I try to lie.
+699	guilt	fear	When I was involved in a car crash.
+701	sadness	anger	When my boyfriend did not turn up in time as he promised he would be coming.
+702	disgust	shame	Once at a camp a classmate criticized me in front of others.  Now I find that this classmate is very disgusting.
+703	guilt	shame	NO RESPONSE.
+704	guilt	joy	When I could not complete my assignment on time.
+705	guilt	shame	Having told a certain lie.
+709	fear	guilt	My father gave me money for school fees and I didn't pay school fees instead I spent it on beer and did not tell him about this.
+710	guilt	anger	When I was 5, a few of my friends and I would light matches for fun. One of my friends confessed to her parents and my parents, I guess, knew or suspected I was involved but I said I knew nothing about it.
+711	anger	disgust	A girl I was with went off with another guy.
+712	shame	anger	When I state things with great positiveness and try to convince others, and it appears that my statement is not right.
+718	shame	disgust	I was with my colleagues and we met an elderly man who was very drunk, as he approached us he started to undress.
+720	guilt	anger	A person I was attracted to walked me home in the rain and got sick.
+721	disgust	fear	When I stayed in the house of friends, I washed my face and wanted to dry it with a towel. This towel seemed to have been used over a long time already. It smelled indefinably awful.
+724	guilt	joy	After masturbation.
+725	anger	disgust	I peeped into Maurine's bedroom and saw two people - Maurine anbd my step-dad.  I thought, " Why did she break her promises ? Why had she invited me ? Why do old men go for young girls ? "
+733	sadness	joy	Girl I was fond of did not initiate conversation as I expected in tutorial.
+734	sadness	guilt	My parents failed to visit me as they promised.
+735	disgust	joy	I felt it when I saw our headmaster blushed ingratiating himself with high ranking officials.
+738	shame	joy	When I was detained one day in school, by the vice-principal, for indiscipline.
+739	disgust	anger	I usually come back home early but this day I came home back late to find some visitors at my place.
+740	anger	fear	I was rushing home from school because there was a 49er game that night. I got into a non-injury accident, which was all my fault, but destroyed the front of my car. The truck I hit was undamaged.
+744	guilt	shame	I was looking after a child and she fell down because I was not paying her much attention.  One side of her face got bruised.
+745	joy	guilt	The sense of joy comes to me always after a period of depression, as an organic feeling for an upsurge. I don't exclude the situative feeling but in this case the reason is not in me, it's out of me.
+747	sadness	shame	When I had not understood anything after a lecture.
+748	shame	anger	One morning after breakfast I was still not satisfied.  My nephew (a small boy of 2) had not eaten his breakfast and just when I was taking a bit of his share someone walked in.
+750	shame	guilt	When I broke the piggy bank of my brother and my mother discovered that.
+752	sadness	joy	Finding out I am not good looking.
+754	shame	joy	I was the last among the list of failures in my class of Biology.
+759	disgust	sadness	When I found out the CIA was mining Nicaraguan harbors.
+764	disgust	guilt	My friend promised to take me out for a movie but he didn't turn up.
+765	disgust	joy	When I opted for my research field, for them the percentage of marks was more important than my knowledge.
+766	guilt	fear	One night,when I was in primary 5 or 6, I felt thirsty so I fetched the thermos to pour a cup of water for myself.  Then I saw my brother lowering his head and I, jokingly, poured the       water on his head.
+767	shame	disgust	When my father came into the bathroom and saw me standing there naked.
+768	shame	joy	When I got 1 mark in an Abnormal Psychology exam.
+772	guilt	anger	Once in my homes yard, I was plaing football with my cousin and in a certain quick the ball went on uncontrolled putting down a bird-cage, killing it.
+778	anger	shame	When I found my boyfriend, who I had been dating for a year, at another girl's house. We had had previous conflicts concerning the girl, but he had always claimed they were just friends.
+780	sadness	guilt	Feeling unable to preserve one's ideas and ambitions as innocent as they are when you are young.
+782	disgust	anger	A certain girl asked me what my major was and when I told her that it was P.A she started criticizing it saying, "I hate that course."  She just shows off in front of other people.
+783	shame	guilt	I had to prepare a report but I couldn't write it. I read from a book off-hand, I was quite uneasy and I felt I didn't manage.
+784	sadness	anger	My girlfriend let me down badly 3 times in one week. These instances summed up all the negative aspects of our relationship which at the time seemed doomed to fail.
+785	shame	guilt	No specific instances - perhaps having lied as a child resulting in someone else being blamed for the event.
+788	disgust	anger	One of those days when I was going to school with my brother and he annoyed me.
+789	shame	disgust	At a private party I literally fell into the food. The party was completely ruined for the host, carpets had to be cleaned, etc.
+793	fear	joy	I was given a wristwatch by my first girl and after two days another girl of mine also gave me a wristwatch.
+794	anger	joy	When I learnt that my younger sister had been expelled from secondary school because she was pregnant.  That was the second time that this happened in the family - the first time it had been my elder sister.
+795	guilt	sadness	I have chosen to put my son in a private school were the examination marks are low.  Every time that he gives me his term results I am left with a sense of guilt.
+796	anger	shame	I bought an aquarium which made me much pleasure. I was watching the fish when my father came in and asked me how much I had payed for it. He said he would not pay for the current that it would require.
+801	disgust	anger	Noticing my flat had maggotts !
+804	fear	guilt	When my son fell off the cot at the age of 5 months, I became very nervous and thought that it would cause defects in his head.  
+805	sadness	shame	After the fact that made me ashamed I felt sadness.
+806	disgust	shame	The curriculum of the year !   The English course was very heavy.  I had not prepared and the teacher asked several questions during class.  The students were not ready to answer the questions and the teacher was frustated.
+807	anger	guilt	When boyfriend lied to me.
+809	guilt	disgust	When I beat up a stupid boy who was fond of cracking jokes on me.
+811	shame	guilt	When I forgot the birthday of my best friend and I innocently came to visit her one week later.
+816	disgust	anger	I had a quarrel with a friend who lived with me in the same flat. He moved out. Before he went he invited me and some friends for a drink. At last he was totally drunk and smelled disgusting. Besides, he told lies about us and behaved as if he was to be pitied.
+818	anger	fear	One night we, all the family members, were sitting in the front corridor of the house when a gentleman looking person came in.  He was my father's client and he had come to bribe my father in connection with the proceeding case.  At my father's refusal he abused my father, my brother and I could not control our temper and we rushed at him.
+820	sadness	joy	When I finished a relation after four years, leading to much sorrow for the other one and myself ("although it was the best solution").
+822	guilt	fear	When I crashed by bike into an old lady crossing a road and knocked her down.
+823	fear	joy	When I was told by the doctor, after many months of coughing, that I had tuberculosis.
+824	disgust	guilt	Observation of people lost in the profit motive - i.e. business managers to their actions esp.
+826	disgust	anger	When a person saw that I was accused of something I had not done and did not do anything to defend me.
+827	sadness	anger	When a friend, after being free of drugs for half a year, started using them again.
+830	joy	anger	My sister in law was about to have a child, and there were some problems.  They had to do a Caesarean.  After a while, everything  was all right.
+834	disgust	fear	I was at home and I heard a loud sound of spitting outside the door.  I thought that one of my family members would step on the spit and bring the germs in the house.
+835	anger	disgust	When, after having cleaned up the kitchen, two hours later I saw that there was a big mess. It irritated me very much.
+836	guilt	anger	When I "passed out" a female friend of mine for no apparent reason.  I was under the influence of drugs and when I am like that I get mad at anyone, however small the provocation.
+839	sadness	shame	Not succeeding in a cross-country skiing competition, which I intended to win.
+841	disgust	shame	Someone told me I was chosen for the English lectures because I am good looking.
+845	shame	guilt	When I was seven years old, I stole a chewing-gum from a big glass bowl on the counter of a nearby shop, and I got caught.
+846	sadness	shame	 [ No response.]
+847	disgust	anger	When someone whom I considered my friend, without telling me he was annoyed, proceeded to ignore me for several meets with no apparent reason.
+850	joy	anger	After my girlfriend had taken her exam we went to her parent's place.
+855	guilt	joy	No ideal result in the University entrance examn, guilty to family and friend.
+861	disgust	guilt	When I think now about the way my father behaved when filing a divorce.
+863	sadness	joy	When I was not accepted as a student in finance and accounting.
+866	sadness	shame	When the girl I loved turned me down.
+872	fear	joy	When I came to know that my exams were on two successive days and that there was very little time (about 9-10 hours) to study in between.
+874	fear	anger	Being threatened by another person.
+885	anger	guilt	[ Whenever I put myself in other's shoes and try to make the person happy, comfort him or make friends and I am misunderstood and rejected, especially when this person is a family member or a friend.]
+890	anger	guilt	When my father banned me from going to his sister's home due to some misunderstanding between the two.
+894	disgust	anger	When a friend of mine keeps telling me morbid things that happened to his dog.
+895	fear	disgust	I felt it at the same time when I felt disgust.
+896	fear	guilt	I felt this feeling when one day my landlord's cat had crept under my bed and I couldn't cope with it during an hour and a half.
+899	sadness	anger	You ignored the fact that we could not hear you at the back.
+901	sadness	anger	A friend of mine could not make it back to Unza after having failed the exams.
+902	disgust	guilt	When my mother betrayed me by obtaining money from my husband when we were separated - pending divorce.
+903	guilt	joy	When I was 4, we spent our holidays at the seaside. My sister and her friend wanted to go to a bay on an undangerous way. I wanted to arrive before them and went on a shorter, but more dangerous way. When I arrived, I found nobody there. I waited for a long time, but nobody came. On my way back I met my mother who had been searching for me desperatly. She did not scold me, but I saw how much she had worried (herself).
+904	disgust	guilt	I was told I shouldn't visit my sister because the holiday was short.
+905	fear	shame	When I was in my village one of my enemies had written a non-sense letter to a girl and he told the father of this girl that I was the culprit.  When I got to know this I was scared as  the girl's father was a worse man.
+906	guilt	shame	Being catched when stealing.
+911	joy	sadness	Meeting best friend at the airport (boyfriend) who I had missed terribly.
+914	guilt	fear	The night of a high school dance, I went partying and collided with another car. Both cars were totalled; people were injured but not seriously.
+915	disgust	sadness	Doctors ignored relative who complained about pain, and is now dying of cancer.
+917	sadness	anger	I had a long discussion on politics with an acquaintance.  He was more knowledgeable than me and I failed to explain my point of view and was misunderstood so I felt depressed and left.
+918	guilt	sadness	Heard that my girl-friend was chosen for the English lectures and I was not. I lost my temper and she is very upset now.
+920	joy	fear	On a boat trip to Denmark, 14 of us had a lot of fun and we spent SEK 10 each on one armed bandits and against all odds we won the jackpot of SEK 1000.
+924	disgust	anger	I was disgusted at the existing red-tape in the government offices.  I accquired my passport three months after having applied for it and I had to go back five times to them to correct a minor error.
+925	disgust	anger	When somebody despised a friend of mine.
+926	fear	shame	When I had to give a speech about some historical event, to an audiece of about 200 people my own age whom I did not know.
+927	shame	guilt	I took an exam which I failed terribly as I had not studied.
+929	sadness	anger	When I argue with my mother about the way she treats her two children differently.
+931	fear	sadness	My daughter was 2 yrs she went up to a colt tried to hit it. It turned on her and kicked her over the heart, sent her flying through the air. I left my mother and sister to deal to her as they are nurses. I felt I didn't want to know if she was going to die, it was just too much.
+934	joy	anger	Made a wonderfull new friend.
+935	guilt	shame	Slept with someone close to my girlfriend and myself.
+936	sadness	guilt	I would have liked to go out to chat with some acquaintances, but I realized that I was not wanted.  I felt hurt, disappointed, lonely and deserted.
+938	anger	guilt	I was at home, filling my tax report.  Nobody had time to help me.  I would have liked to do it quickly so that I could go and meet a friend of mine who had just returned from hospital.  I got angry as both my brother and my father refused to give me their calculator as I had not asked for it nicely.  I could not leave as I had to wait for help and the tax report had to be done.
+939	sadness	disgust	I met some nice people during my holdidays. When they left I knew that I would never see them again.
+944	shame	sadness	The discovery that one has only thought of oneself.
+947	anger	joy	The trick was really intolerable.  They hid it, and I was worried and restless all day.  When I saw them I really wanted to slap each one of them.
+951	sadness	shame	[ No response.]
+954	guilt	sadness	When I inadvertantly made some close friends and relatives feel bad.
+955	shame	guilt	[ I have never felt this emotion.]
+960	guilt	shame	Someone asked me to do something and I made up an excuse and said no. I then went and didn't the same thing with someone else and hoped the first person never found out.
+962	anger	guilt	When my mother decided to clean out my room and throw out what she thought was junk, without my knowing about it, so I returned home to find half my stuff gone.
+967	guilt	sadness	The results of the mid term examinations were very poor.
+968	guilt	shame	Not being able to convince my class leader that my friend is better than me to go to the English lectures.
+969	disgust	sadness	I am disgusted with the fact that bad singers play at the opera (and not only there) only because they are protegTs or lovers of an important felow while at the same time some young and able singers work in a quite different field of life.
+970	anger	joy	Arriving home from work after a long and tiring day to find no dinner prepared as I had expected.
+971	anger	joy	When I was put into a tennis team below my standard.
+972	fear	disgust	My first public appearance in front of a rathe big audience.
+973	guilt	anger	I had a quarrel with near persons. I said many ill-considered things and I regretted it when it was to late.
+975	sadness	fear	When I woke up after a nightmare.
+977	sadness	joy	When I was transferred from Chichiri Secondary School to St. Mary's Sec. School. I was happy at Chichiri as a day scholer and had made a lot of friends. I was going to a boarding and that meant parting with my friends as well as my boyfriend for the first time.
+978	anger	disgust	When someone I trusted very much, disappointed me.
+980	disgust	sadness	When I see all the putridness of people. The fact is the catarrh and spits that whash the streets of S.Paulo.
+981	disgust	joy	When I met my boyfriend with another girl.
+985	shame	guilt	I lied to a friend.
+988	joy	guilt	I felt happy at the settlement of our marriage, even though we are from different socio-linguistic backgrounds our parents agreed to the wedding without any conflict or discussion.  We had  thought that they would object to the wedding but it did not happen. 
+989	anger	shame	When a boy, who was drunk, insulted me in front of a crowd.  I was stopped from punching him for it.
+991	disgust	shame	[ When some people act very important in any situation.]
+992	anger	guilt	I came home one day and discovered that my sister had borrowed my car and had gotten into an accident with it. My entire front bumper was destroyed.
+993	guilt	anger	When I was made to feel responsible for the emotional state a friend of mine was in.
+999	anger	guilt	My parents do not like my friend and told me not to go out with him.
+1002	guilt	joy	I felt it when I came home after the examination session and I said I had not passed my last exam.
+1003	anger	sadness	My mother and her friends were speaking badly about my father when they were separated, and my brothers and sisters and myself were allowed to listen.
+1004	guilt	shame	[ No response.]
+1006	anger	joy	When my boyfriend sat up half the night playing computer games with a friend.
+1013	shame	disgust	My little brother was arrested by the police at the railway station after he had drunk some beer.
+1014	sadness	anger	Got a package from my parents, without even a small note enclosed.
+1018	anger	guilt	The time when someone let the air out of the tyres of my cycle.
+1019	shame	guilt	Forgot to do some shopping that I had promised to do.
+1022	disgust	sadness	When my uncle comes (3 times a year) for the traditional Christmas dinner with my grandparents and other relatives and is very drunk.
+1023	guilt	sadness	Due to laziness, I failed the term studies completely at University.  I also wanted, to some extent, to protest against my parents' expectations.
+1028	sadness	joy	It was last September when I felt very sad. It was when I heard that I was not selected to study in the University of Malawi.
+1031	disgust	joy	The sadistinc exacution of a student in the USA.
+1032	guilt	disgust	Meeting a male friend with whose wife I was having an affair.
+1033	sadness	joy	I was very sad  when I got the XIIth standard results, when I got low marks as compared to my friend and I could not get admission to courses like medicine.
+1035	shame	anger	I told Mr Winter of Downtown Fashion to go to - when he did not accept my Visa !
+1037	guilt	disgust	Whenever I see poverty and starvation. I live in an affluent society and am privileged to have many opportunities.
+1042	fear	disgust	A gang of screaming and drunk youths "captured" a tram.
+1044	shame	joy	Zhu Jianhau did not break the world record for China.
+1046	joy	fear	The day I received the key of my apartment and we could enter in it, for my fiancT and I had bought it yet in plans, and it seemed to us that this was almost impossible to happen.
+1050	anger	shame	When my bosom friend tried to lie to me.
+1051	joy	sadness	When my boyfriend came back after being away for 10 days.
+1055	shame	guilt	Had to tell people that my parents are divorced.
+1056	shame	sadness	This situation happened when I was found kissing a girl who was my friend's girlfriend.
+1060	joy	fear	This happened when I was in the 10th standard.  The paddy crops were in a bad shape as it had not rained and there was no water in the well, so I was in a very sad mood.  I came to the conclusion that I would ignore the paddy field, just 12 hours after this it rained for one hour.  This was a very tense time and the rain brought me tremendous pleasure.
+1061	anger	guilt	The editor changed the heading of an article that I had written.  He considered the heading to be derogatory towards the person I had written about.
+1063	disgust	guilt	When I made love with someone who I didn't really love. Sometimes I even considered him unlikable.
+1064	disgust	joy	When I visited a creche. The conditions weren't too precarious but the children were in conditions of physical and emotional penury.
+1065	sadness	joy	At end of school - function to "celebrate" ? Leaving friends who I'd known for up to 12 years.
+1070	guilt	shame	[ No response.]
+1075	sadness	joy	When my first love was not successful.
+1076	disgust	fear	A friend and a girlfriend went to Rome for 10 days with their class. When they were back home I heard people tell "strange" stories about my friend and that girlfriend.
+1079	anger	guilt	Brother took my money to use for his own purposes.
+1082	guilt	joy	When I had to go to reconciliation before converting to Catholicism but then once received - o.k.
+1083	joy	sadness	When I heard that a close relative of mine had given birth at a very young age, in a very remote area and had had very few problems.
+1084	guilt	sadness	It happens to me quite often. I can't describe a particular case.
+1085	disgust	anger	When my girlfriend told me that she was no longer interested in me.
+1089	anger	sadness	My parents did not let me go on holidays with my friends.
+1091	anger	guilt	I reachad home to find that my baby had not been bathed and fed.
+1094	anger	guilt	My sister had promised to help me to do a translation from English into German. But the day I needed her she told me that she was busy - I was very angry.
+1096	fear	sadness	I felt so afraid when dad fell ill, he had never suffered from that disease since and I had never seen him as he was.
+1097	joy	guilt	I went to visit friends and it was very companionable.
+1109	sadness	shame	Not winning a medal in the swimming contest.
+1112	anger	sadness	When I heard that an acquaintance of mine was spreading rumours about my affair with a close friend.
+1113	shame	anger	When people next to me play the fool.
+1118	guilt	shame	[ No response.]
+1121	shame	guilt	I made a very insulting remark against a person whom I care for very much. This event was caused by a third person who didn't like the person I insulted.
+1125	guilt	disgust	When my husband discovered I was having an affair with another man.
+1127	shame	sadness	The day I learnt that my girlfriend had been going around with  a close friend of mine.
+1128	guilt	anger	When quarreling with friends.
+1131	anger	disgust	An old woman was violently thrown down the stairs of the tube by a group of louts.
+1134	guilt	anger	A friend was going to come stay the weekend with me, but something came up and I cancelled out on him.
+1136	anger	shame	Someone talking about me at my back.
+1137	shame	fear	My sister was afraid of her husband.
+1139	sadness	fear	I was on my way back from the Inter Rail, on board the ferry from Stockholm when my father called me at 7 o'clock to tell me that my uncle had died and that I would be seeing him off on his final journey within four days.
+1140	sadness	disgust	When I saw the pictures of the draught in Etiopia.
+1141	joy	guilt	When my lover and I felt like we had gone full circle. And our relationship was new, fresh, vital etc. once again.
+1145	disgust	anger	My elder sister forced me to do a few things which I did not like to do.
+1146	shame	guilt	Teacher suspected me stealing money.
+1147	anger	shame	I remember that when I was in school I saw a case of partiality - one of the teachers gave private coaching classes to some girls and she would give these girls extra attention in class and would ignore the others.
+1148	disgust	joy	When I study my butt off for a midterm and still get an average grade.

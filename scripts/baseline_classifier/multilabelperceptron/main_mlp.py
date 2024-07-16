@@ -9,7 +9,7 @@ def run_perceptron(data_loader):
     labels = ['joy', 'anger', 'fear', 'sadness', 'disgust','guilt','shame']
 
     # MultiLabelPerceptron instance
-    mlp_instance = MultiLabelPerceptron(data_loader, labels=labels, train_iterations=10, eta=0.1, k_folds=5)
+    mlp_instance = MultiLabelPerceptron(data_loader, labels=labels, train_iterations=10, eta=0.1)
 
     # Training
     mlp_instance.training_of_perceptron()

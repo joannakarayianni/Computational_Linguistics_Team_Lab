@@ -3,26 +3,23 @@
 Parameters: Training instances/ training data, learning rate- eta, labels (emotion labels-classes), iterations on training set
 Attributes: weights, features"""
 
-
 from baseline_classifier.multilabelperceptron.emotion import EmotionSample
-import evaluation.evaluation_metrics as eval
-from sklearn.model_selection import KFold
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import pandas as pd
 
 class MultiLabelPerceptron:
-    def __init__(self, dataloader, labels, train_iterations=100, eta=0.1, k_folds=5):
+    def __init__(self, dataloader, labels, train_iterations=100, eta=0.1):
         self.df_train = dataloader.df_train
         self.df_val = dataloader.df_val
         self.df_test = dataloader.df_test
         self.train_iterations = train_iterations
         self.labels = labels
         self.eta = eta
-        self.k_folds = k_folds
         
         # Attributes
         self.weights = {}  # Storing weights for each feature of each label
         self.initialize_weights()  # Calling function for weight initialization
-        self.features = self.weights.keys()  # Set of all features with weights considered during training
+        self.features = set(self.weights.keys())  # Set of all features with weights considered during training
 
     # Weight initializing function
     def initialize_weights(self):
@@ -36,89 +33,102 @@ class MultiLabelPerceptron:
 
     # Perceptron training with training set
     def training_of_perceptron(self):
-        # Combine the training and validation datasets
+        # Combining the training and validation datasets
         df_combined = pd.concat([self.df_train, self.df_val])
-        
-        kf = KFold(n_splits=self.k_folds, shuffle=True, random_state=42)
-        fold_number = 0
-        for train_index, val_index in kf.split(df_combined):
-            df_train_fold = df_combined.iloc[train_index]
-            df_val_fold = df_combined.iloc[val_index]
-            fold_number+=1
-            for epoch in range(self.train_iterations):
-                train_correct = 0
-                train_total = 0
-                for _, row in df_train_fold.iterrows():
-                    emotions = row[0].split()
-                    text = row[1]
-                    train_instance = EmotionSample(emotions, text)
-                    features = train_instance.features 
-                    for label in self.labels:
-                        # Correct label if it matches the current label
-                        y_true = 1.0 if label in train_instance.emotions else -1.0
-                        # Will be updated based on features and weights during prediction
-                        y_predicted = self.predict(features, label) # We call predict function
-                        if y_true == y_predicted:
-                            train_correct += 1
-                        train_total += 1
-                        if y_true != y_predicted:
-                            
-                            self.update_weights(features, label, y_true) # We call update_weights function
-
-                train_accuracy = train_correct / train_total
-
-                ####################### Run the classifier on the dev dataset ####################### 
-                dev_accuracy = self.evaluate_on_dev_and_test(df_val_fold)
-            
-                print(f'Epoch {epoch + 1} K-fold-val {fold_number}: Training Accuracy: {train_accuracy}, Validation Accuracy: {dev_accuracy}')
-            
-            ####################### Run the classifier on the test dataset ####################### 
-            test_accuracy = self.evaluate_on_dev_and_test(self.df_test)
-            print(f'Test accuracy: {test_accuracy}')
-
-    def evaluate_on_dev_and_test(self, df):
-
-        labels = self.labels
-        predicted_labels = []
+        for epoch in range(self.train_iterations):
+            train_correct = 0
+            train_total = 0
+            for _, row in df_combined.iterrows():
+                emotions = row[0].split()
+                text = row[1]
+                train_instance = EmotionSample(emotions, text)
+                features = train_instance.features 
+                for label in self.labels:
+                    # Correct label if it matches the current label
+                    y_true = 1.0 if label in train_instance.emotions else -1.0
+                    # Will be updated based on features and weights during prediction
+                    y_predicted = self.predict(features, label)  # We call predict function
+                    if y_true == y_predicted:
+                        train_correct += 1
+                    train_total += 1
+                    if y_true != y_predicted:
+                        self.update_weights(features, label, y_true)  # We call update_weights function
+            #train_accuracy = train_correct / train_total
+            # Evaluating on the validation set
+            self.evaluate_on_dev_dataset(epoch)
+        # Evaluating on the test set after training completes
+        self.evaluate_on_test_dataset()
+# evaluation on the validation set
+    def evaluate_on_dev_dataset(self, epoch):
         true_labels = []
-
-        correct_predictions = 0
-        total_samples = 0  # To count the total number of samples
-
-        for _, row in df.iterrows():
-            # unpacking the row fields.
+        predicted_labels = []
+        for _, row in self.df_val.iterrows():
             emotion_class, text = row
-                        
             actual_label = emotion_class
             true_labels.append(actual_label)
 
-            # Make a prediction using your classifier
+            # Making predictions using our classifier
             data_instance = EmotionSample([], text)
             max_score = -float('inf')
             predicted_label = None
-            for label in labels:
+            for label in self.labels:
                 prediction = self.predict(data_instance.features, label)
                 if prediction > max_score:
                     max_score = prediction
                     predicted_label = label
-
-            # Check if the prediction is correct
-            if predicted_label == actual_label:
-                correct_predictions += 1
-            total_samples += 1
             predicted_labels.append(predicted_label)
-        
-        accuracy = correct_predictions / total_samples
-        eval.test_evaluation(true_labels, predicted_labels, labels)
 
-        return accuracy
+        # Computing evaluation metrics (accuracy, precision, recall, f1)
+        accuracy = accuracy_score(true_labels, predicted_labels)
+        precision, recall, f1, _ = precision_recall_fscore_support(true_labels, predicted_labels, average=None, labels=self.labels)
+
+        # Printing metrics for each emotion
+        for idx, label in enumerate(self.labels):
+            print(f"Epoch {epoch + 1} Dev Evaluation - Emotion: {label}")
+            print(f"Accuracy: {accuracy}")
+            print(f"Precision: {precision[idx]}")
+            print(f"Recall: {recall[idx]}")
+            print(f"F1-score: {f1[idx]}")
+            print("------------------------------")
+# evaluation on the training set
+    def evaluate_on_test_dataset(self):
+        true_labels = []
+        predicted_labels = []
+        for _, row in self.df_test.iterrows():
+            emotion_class, text = row
+            actual_label = emotion_class
+            true_labels.append(actual_label)
+
+            # Making predictions using our classifier
+            data_instance = EmotionSample([], text)
+            max_score = -float('inf')
+            predicted_label = None
+            for label in self.labels:
+                prediction = self.predict(data_instance.features, label)
+                if prediction > max_score:
+                    max_score = prediction
+                    predicted_label = label
+            predicted_labels.append(predicted_label)
+
+        # Computing evaluation metrics
+        accuracy = accuracy_score(true_labels, predicted_labels)
+        precision, recall, f1, _ = precision_recall_fscore_support(true_labels, predicted_labels, average=None, labels=self.labels)
+
+        # Printing metrics for each emotion
+        for idx, label in enumerate(self.labels):
+            print(f"Test Evaluation - Emotion: {label}")
+            print(f"Accuracy: {accuracy}")
+            print(f"Precision: {precision[idx]}")
+            print(f"Recall: {recall[idx]}")
+            print(f"F1-score: {f1[idx]}")
+            print("------------------------------")
 
     # Predicting the label for a given feature list
     def predict(self, features, label_to_predict):
         score = sum(self.weights[label_to_predict].get(feature, 0.0) for feature in features)
         return 1.0 if score >= 0 else -1.0
 
-    # Update weights based on prediction error
+    # Updating weights based on the prediction error
     def update_weights(self, features, label, y_true):
         for feature_label in features:
             if feature_label in self.weights[label].keys():
