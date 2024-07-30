@@ -88,11 +88,6 @@ class SequentialNNGlove:
         # Report
         print(classification_report(y_val_labels, np.argmax(y_pred_binary, axis=1), target_names=self.emotions))
 
-        # y_pred_binary = np.argmax(y_pred, axis=1)
-        # y_val_binary = np.argmax(y_val_labels_binary, axis=1)
-
-        # # Report
-        # print(classification_report(y_val_binary, y_pred_binary, target_names=self.emotions))
 
     def test(self):
       
@@ -104,6 +99,11 @@ class SequentialNNGlove:
 
         # Predict on test set
         y_pred = self.model.predict(X_test_embeddings)
+
+         # Evaluate the model on validation set
+        loss, accuracy = self.model.evaluate(X_test_embeddings, y_test_labels_binary, verbose=0)
+        print(f'Test Loss: {loss}')
+        print(f'Test Accuracy: {accuracy}')
         
         # Convert predictions to binary format (one-hot encoded)
         y_pred_binary = np.zeros_like(y_pred)
@@ -113,7 +113,7 @@ class SequentialNNGlove:
         pred_df = pd.DataFrame(y_pred_binary, columns=self.emotions)
         pred_df.to_csv('scripts/advanced_classifier/sequential_nn/predictions/predictions_seq_nn_glove.csv', index=False)
 
-        # Convert validation labels to one-hot for classification report
+        # Convert test labels to one-hot for classification report
         y_test_labels = np.argmax(y_test_labels_binary, axis=1)
 
         # Report
