@@ -1,5 +1,11 @@
+""" Comparing the predictions of the 3 best Seq. NN configurations: word2vec with dropout, word2vec with tf-idf, seq. nn with glove embeddings against the golden standard (test sataset with correct 
+labels on each instance ) 
+The metrics used where F1, Precision, Recall, F1 micro, F1 macro, Precision micro, recall micro and hamming loss
+"""
+
 import pandas as pd
-from scripts.evaluation.vaulting import Vaulting
+from scripts.evaluation.models_comparision_visualizer import ModelComparisonVisualizer
+
 
 
 # Loading prediction files for all the models
@@ -18,5 +24,5 @@ models = {
 }
 
 
-vaulting_instance = Vaulting(ground_truth_test, models)
-vaulting_instance.findResults("seq_nn")
+visualizer_instance = ModelComparisonVisualizer(ground_truth_test, models)
+visualizer_instance.findResults("seq_nn")

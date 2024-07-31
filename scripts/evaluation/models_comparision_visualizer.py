@@ -3,7 +3,7 @@ from sklearn.metrics import hamming_loss, f1_score, precision_score, recall_scor
 from sklearn.metrics import precision_recall_fscore_support
 import matplotlib.pyplot as plt
 
-class Vaulting:
+class ModelComparisonVisualizer:
 
     def __init__(self, ground_truth, models):
         self.ground_truth = ground_truth
