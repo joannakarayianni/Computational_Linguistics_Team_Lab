@@ -12,7 +12,7 @@ Emotion text detection involves classifying text based on emotional content, a c
 
 # Setup
 
-## Create the virtual environment:-
+## Create the virtual environment (Please use Python version 3.12.3 to be compatible with the libraries used in the project):-
 
 python -m venv venv       
 source venv/bin/activate     
