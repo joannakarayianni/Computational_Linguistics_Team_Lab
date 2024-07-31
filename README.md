@@ -21,9 +21,12 @@ pip install .
 |-- dataanalysis   
 |-- datasets   
 
-## Ensure that you have word embeddings downloaded to run the GloVe based Seq. Neural Networks in the below location.
- 
-scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt
+## Ensure that you have word embeddings downloaded to run the GloVe based Seq. Neural Networks & LSTM GloVe in the below locations.
+Embeddings were downloaded from this website: https://nlp.stanford.edu/projects/glove/ , 'glove.6B.zip'
+Locations:
+
+Seq. NNs: scripts/advanced_classifier/word_embeddings/glove.6B/glove.6B.300d.txt
+LSTM GloVe: scripts/advanced_classifier/lstm/glove.6B.100d.txt
 
 ## To visualize the performance of various models for each metric, execute the following command:
 #### Note: A similar visualization process has been applied for the sequence neural network models as well.
