@@ -2,6 +2,9 @@
 
 This project is of the course Computational Linguistics Team Laboratory for the MSc in Computational Linguistics at the University of Stuttgart.
 
+## Results
+
+![Table Image](https://github.com/joannakarayianni/Computational_Linguistics_Team_Lab/blob/main/images/performance_comparison.png)
 
 ## Create the virtual environment:-
 
