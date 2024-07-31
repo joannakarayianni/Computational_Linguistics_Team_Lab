@@ -33,12 +33,10 @@ class MultiLabelPerceptron:
 
     # Perceptron training with training set
     def training_of_perceptron(self):
-        # Combining the training and validation datasets
-        df_combined = pd.concat([self.df_train, self.df_val])
         for epoch in range(self.train_iterations):
             train_correct = 0
             train_total = 0
-            for _, row in df_combined.iterrows():
+            for _, row in self.df_train.iterrows():
                 emotions = row[0].split()
                 text = row[1]
                 train_instance = EmotionSample(emotions, text)
