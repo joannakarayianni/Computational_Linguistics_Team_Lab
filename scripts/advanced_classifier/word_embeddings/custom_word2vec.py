@@ -36,7 +36,6 @@ class CustomWord2Vec:
         word2vec_model.save("emotion_word2vec.model")
 
     def get_embeddings_matrix(self, df):
-        # TODO: Make tokenized_data into a helper function
         tokenized_data = []
 
         for index, row in df.iterrows():

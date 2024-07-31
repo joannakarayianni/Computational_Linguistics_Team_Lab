@@ -21,6 +21,13 @@ pip install .
 |-- dataanalysis   
 |-- datasets   
 
+## Ensure that you have word embeddings downloaded to run the GloVe based Seq. Neural Networks.
+ 
+|-- scripts    
+    |-- advanced_classifier   
+        |-- word_embeddings  
+            |-- glove.6B
+                    |--glove.6B.300d.txt
 
 ## Run
 
