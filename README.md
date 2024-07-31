@@ -29,6 +29,12 @@ pip install .
             |-- glove.6B
                     |--glove.6B.300d.txt
 
+## To visualize the performance of various models for each metric, execute the following command:
+### Note: A similar visualization process has been applied for the sequence neural network models as well.
+
+python3 -m scripts.advanced_classifier.lstm.lstm_model_comparison_visualizer
+
+
 ## Run
 
 python ./scripts/main.py
