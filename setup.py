@@ -11,5 +11,5 @@ setup(
     author="Tonmoy & Ioanna",
     packages=find_packages(),
     install_requires=parse_requirements('./config/requirements.txt'),
-    python_requires='==3.12.2',
+    python_requires='==3.12.3',
 )
