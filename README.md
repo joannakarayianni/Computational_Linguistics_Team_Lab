@@ -2,6 +2,10 @@
 
 This project is of the course Computational Linguistics Team Laboratory for the MSc in Computational Linguistics at the University of Stuttgart.
 
+# Description
+
+Emotion text detection involves classifying text based on emotional content, a critical and challenging aspect of Natural Language Processing (NLP) due to the nuanced nature of human emotions. In this project, we aimed to perform a multilabel classification on the ISEAR dataset (CISA, University of Geneva, 2024-07-16), which includes 7 classes - Joy, Sadness, Disgust, Guilt, Shame, Fear, and Anger. It consists of textual descriptions annotated with these emotion labels. The primary research question we aimed to address is: "How can different machine learning models and embedding techniques, which capture contextual information, be utilized to effectively classify fine-grained emotional content in text?"
+
 ## Results
 
 ![Table Image](https://github.com/joannakarayianni/Computational_Linguistics_Team_Lab/blob/main/images/performance_comparison.png)
