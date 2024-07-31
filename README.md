@@ -10,6 +10,8 @@ Emotion text detection involves classifying text based on emotional content, a c
 
 ![Table Image](https://github.com/joannakarayianni/Computational_Linguistics_Team_Lab/blob/main/images/performance_comparison.png)
 
+# Setup
+
 ## Create the virtual environment:-
 
 python -m venv venv       
